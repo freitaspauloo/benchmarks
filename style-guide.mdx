@@ -36,8 +36,14 @@ Use this page as the template before publishing new benchmark write-ups.
 
 ## Charts
 
-- Firegraph-style scatter plots will be added as static assets or embedded components per suite.
-- Place the chart above insight cards; pricing tables below or in a sidebar column on wide layouts.
+- **Firegraph scatter plots** — static SVGs in `/images/`, generated with `npm run generate:firegraph` from the same data as `faithful`’s in-app benchmark.
+- **Log and actual scale** — use Mintlify `Tabs` on detail pages; default to log scale on landing pages.
+- Place the chart above stat cards when possible; pricing tables and disclaimers below.
+- Regenerate assets after data changes, then push to `main` for Mintlify to redeploy.
+
+<Frame caption="Reference: General suite Firegraph (log scale).">
+  <img src="/images/general-accuracy-vs-cost-log.svg" alt="Reference Firegraph scatter plot for the General accuracy vs cost benchmark." />
+</Frame>
 
 ## Components to prefer
 

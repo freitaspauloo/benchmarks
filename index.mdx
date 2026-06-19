@@ -21,6 +21,25 @@ mode: "custom"
 </div>
 
 <Columns cols={2}>
+  <Card title="4.24–4.46" icon="target">
+    Aligned AI accuracy range on the conversation-understanding set — 3rd and 5th in the top-10 view.
+  </Card>
+  <Card title="<$0.01" icon="coins">
+    Average cost per chat for Aligned AI Fast and Research modes.
+  </Card>
+</Columns>
+
+Aligned AI Fast and Research sit close to top Grok and Opus accuracy while staying far lower on average benchmark cost per chat.
+
+<Frame caption="Accuracy vs. average cost per chat (log scale). Thirteen frontier models — Aligned AI clusters near the top-left: high accuracy, low cost.">
+  <img src="/images/general-accuracy-vs-cost-log.svg" alt="Firegraph scatter plot of model accuracy versus average cost per chat on a log cost scale." />
+</Frame>
+
+<Note>
+  Static Firegraph export from the same data as our in-app benchmark. Switch to **actual scale**, full model table, and pricing inputs on [Accuracy vs. cost](/general/accuracy-vs-cost).
+</Note>
+
+<Columns cols={2}>
   <Card title="General benchmarks" icon="chart-scatter" href="/general">
     Conversation understanding and hallucination detection — accuracy vs. average cost per chat.
   </Card>
