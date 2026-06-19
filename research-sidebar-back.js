@@ -14,7 +14,7 @@
     link.className = "research-sidebar-back";
     link.setAttribute("aria-label", "Back to introduction");
     link.innerHTML =
-      '<svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 15L7.5 10L12.5 5"/></svg><span>Back</span>';
+      '<svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 15L7.5 10L12.5 5"/></svg>';
     return link;
   }
 
