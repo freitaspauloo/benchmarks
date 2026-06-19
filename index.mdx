@@ -8,15 +8,15 @@ mode: "custom"
 
 <div className="mx-auto w-full max-w-4xl px-6 py-16">
   <div className="text-center">
-    <span className="inline-flex rounded-full bg-[#ebf6f2] px-3 py-1 text-xs font-semibold text-[#027864]">
+    <span className="inline-flex rounded-full bg-[#ebf6f2] px-3 py-1 text-xs font-semibold text-[#027864] dark:bg-[#027864]/20 dark:text-[#7dd3af]">
       Research
     </span>
 
-    <h1 className="mt-6 text-balance text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl">
+    <h1 className="mt-6 text-balance text-4xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl">
       Aligned AI benchmarks & research
     </h1>
 
-    <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-7 text-zinc-600 sm:text-lg">
+    <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-400 sm:text-lg">
       Public benchmark runs, model context, and roadmap — separate from API docs.
       We publish accuracy vs. cost results here as new suites ship.
     </p>
@@ -37,6 +37,7 @@ mode: "custom"
       Faith-aligned evaluation and consortium leaderboard comparisons.
     </Card>
   </Columns>
+  </div>
 
   <Note>
     API reference and developer docs stay on the main product site. This research site is for benchmark transparency and methodology.
