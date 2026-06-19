@@ -1,6 +1,10 @@
 # Aligned AI Benchmarks (Mintlify)
 
-Benchmark content for Aligned AI — **not** in the `faithful` app repo.
+Benchmark content for Aligned AI — separate from the `faithful` app repo.
+
+**Live site:** https://dudesign.mintlify.io/
+
+**Future domain:** `research.joinaligned.ai` (when DNS is ready)
 
 ## Local preview
 
@@ -11,17 +15,11 @@ npm run dev
 
 Open **http://localhost:3000**
 
-## Connect to Mintlify (one-time, team)
+## GitHub → Mintlify
 
-1. Sign in at [app.mintlify.com](https://app.mintlify.com)
-2. Create a project (or use existing org project)
-3. **Settings → Deployment → Git** — install GitHub app, connect `freitaspauloo/benchmarks` (or transfer to `chriselevow/benchmarks` first)
-4. Push this repo; Mintlify deploys on merge to main
+Repo: https://github.com/freitaspauloo/benchmarks
 
-## Mintlify MCP (Cursor)
-
-- Docs search: `https://mintlify.com/docs/mcp`
-- Admin / edit: `https://mcp.mintlify.com` (OAuth in Cursor → Tools & MCP)
+Push to `main` → Mintlify deploys to https://dudesign.mintlify.io/
 
 ## Structure
 
@@ -30,7 +28,7 @@ Open **http://localhost:3000**
 | `index.mdx` | Landing (customers-style card grid) |
 | `style-guide.mdx` | Component + footnote standards |
 | `general/` | Accuracy vs. cost suite |
-| `cefeai/` | CEFeAI suite |
+| `cefeai/` | CEFeAI suite (after General) |
 
 ## Footnotes (required)
 
