@@ -1,8 +1,8 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Aligned AI Benchmarks",
-  "description": "Accuracy, cost, and methodology for Aligned AI benchmark suites.",
+  "name": "Aligned AI Research",
+  "description": "Benchmarks, model context, and roadmap for Aligned AI.",
   "colors": {
     "primary": "#22a06b",
     "light": "#ebf6f2",
@@ -36,24 +36,11 @@
     }
   },
   "navigation": {
-    "directory": "card",
     "groups": [
       {
-        "group": "Overview",
+        "group": "Research",
         "public": true,
-        "pages": ["index", "style-guide"]
-      },
-      {
-        "group": "General",
-        "public": true,
-        "root": "general/index",
-        "pages": ["general/accuracy-vs-cost", "general/methodology"]
-      },
-      {
-        "group": "CEFeAI",
-        "public": true,
-        "root": "cefeai/index",
-        "pages": ["cefeai/overview"]
+        "pages": ["index", "roadmap", "model", "general", "cefeai"]
       }
     ]
   }

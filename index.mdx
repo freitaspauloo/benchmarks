@@ -1,55 +1,41 @@
 ---
-title: "Aligned AI Benchmarks"
+title: "Introduction"
 public: true
-description: "Conversation understanding, cost efficiency, and faith-aligned evaluation."
+sidebarTitle: "Introduction"
+description: "Aligned AI research — benchmarks, model notes, and what we publish here."
 mode: "custom"
 ---
 
 <div className="mx-auto max-w-5xl px-6 py-16 text-center">
   <span className="inline-flex rounded-full bg-[#ebf6f2] px-3 py-1 text-xs font-semibold text-[#027864]">
-    Benchmarks
+    Research
   </span>
 
   <h1 className="mt-6 text-balance text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl">
-    Frontier accuracy at a fraction of the cost
+    Aligned AI benchmarks & research
   </h1>
 
   <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-7 text-zinc-600 sm:text-lg">
-    Accuracy vs. average cost per chat, methodology, and suite-specific notes for Aligned AI —
-    published here as we add new benchmark runs.
+    Public benchmark runs, model context, and roadmap — separate from API docs.
+    We publish accuracy vs. cost results here as new suites ship.
   </p>
 </div>
 
 <Columns cols={2}>
-  <Card title="4.24–4.46" icon="target">
-    Aligned AI accuracy range on the conversation-understanding set — 3rd and 5th in the top-10 view.
+  <Card title="Roadmap" icon="map" href="/roadmap">
+    What benchmark suites and research notes are planned next.
   </Card>
-  <Card title="<$0.01" icon="coins">
-    Average cost per chat for Aligned AI Fast and Research modes.
+  <Card title="Model" icon="cpu" href="/model">
+    How Aligned AI Fast and Research fit the compound product.
   </Card>
-</Columns>
-
-Aligned AI Fast and Research sit close to top Grok and Opus accuracy while staying far lower on average benchmark cost per chat.
-
-<Frame caption="Accuracy vs. average cost per chat (log scale). Thirteen frontier models — Aligned AI clusters near the top-left: high accuracy, low cost.">
-  <img src="/images/general-accuracy-vs-cost-log.svg" alt="Firegraph scatter plot of model accuracy versus average cost per chat on a log cost scale." />
-</Frame>
-
-<Note>
-  Static Firegraph export from the same data as our in-app benchmark. Switch to **actual scale**, full model table, and pricing inputs on [Accuracy vs. cost](/general/accuracy-vs-cost).
-</Note>
-
-<Columns cols={2}>
-  <Card title="General benchmarks" icon="chart-scatter" href="/general">
-    Conversation understanding and hallucination detection — accuracy vs. average cost per chat.
+  <Card title="General benchmark" icon="chart-scatter" href="/general">
+    Conversation understanding — accuracy vs. average cost per chat.
   </Card>
   <Card title="CEFeAI" icon="scale" href="/cefeai">
-    Faith-aligned evaluation benchmarks and consortium leaderboard comparisons.
-  </Card>
-  <Card title="Style guide" icon="palette" href="/style-guide">
-    Cards, stats, footnotes, and chart placement before we publish new suites.
-  </Card>
-  <Card title="Methodology" icon="book-open" href="/general/methodology">
-    How we normalize API pricing, run question sets, and report accuracy.
+    Faith-aligned evaluation and consortium leaderboard comparisons.
   </Card>
 </Columns>
+
+<Note>
+  API reference and developer docs stay on the main product site. This research site is for benchmark transparency and methodology.
+</Note>
