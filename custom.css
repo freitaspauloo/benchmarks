@@ -1,10 +1,13 @@
 #topbar-cta-button {
-  background-color: #141414 !important;
-  border-color: #141414 !important;
-  color: #ffffff !important;
+  background: transparent !important;
+  border: none !important;
 }
 
-#topbar-cta-button:hover {
+#topbar-cta-button a > span.absolute {
+  background-color: #141414 !important;
+}
+
+#topbar-cta-button a:hover > span.absolute {
   background-color: #000000 !important;
-  border-color: #000000 !important;
+  opacity: 1 !important;
 }
