@@ -1,0 +1,10 @@
+#topbar-cta-button {
+  background-color: #141414 !important;
+  border-color: #141414 !important;
+  color: #ffffff !important;
+}
+
+#topbar-cta-button:hover {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}

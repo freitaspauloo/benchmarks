@@ -1,3 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 32" fill="none">
-  <text x="0" y="22" fill="#0d0d0d" font-family="system-ui,sans-serif" font-size="16" font-weight="600">Aligned AI</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 32" fill="none">
+  <defs>
+    <linearGradient id="aligned-logo-tile" x1="4" y1="4" x2="24" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A2A2E" />
+      <stop offset="0.52" stop-color="#0C0C0E" />
+      <stop offset="1" stop-color="#030304" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="2" width="28" height="28" rx="8" fill="url(#aligned-logo-tile)" stroke="rgba(255,255,255,0.15)" />
+  <text x="14" y="20" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="300" text-anchor="middle">λ</text>
+  <text x="38" y="21" fill="#141414" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600">Aligned AI</text>
 </svg>
