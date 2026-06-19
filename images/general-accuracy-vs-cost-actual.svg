@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="600" viewBox="0 0 920 600" role="img" aria-label="Accuracy vs cost scatter plot, actual scale">
+  <defs>
+    <linearGradient id="firegraph-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dff5e6" />
+      <stop offset="55%" stop-color="#6ed98a" />
+      <stop offset="100%" stop-color="#4ecf72" />
+    </linearGradient>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="15" flood-color="rgba(15,23,42,0.08)" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#firegraph-bg)" rx="16" />
+  <rect x="32" y="32" width="856" height="480" rx="12" fill="rgba(255,255,255,0.95)" filter="url(#card-shadow)" />
+  <circle cx="52" cy="52" r="6" fill="#d4d4d8" />
+  <circle cx="68" cy="52" r="6" fill="#d4d4d8" />
+  <circle cx="84" cy="52" r="6" fill="#d4d4d8" />
+  <text x="460" y="56" text-anchor="middle" fill="#52525b" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500">Accuracy vs. Cost</text>
+  <g transform="translate(52, 76)">
+    
+    <g transform="translate(0, 0)">
+      <line x1="68" y1="374" x2="652" y2="374" stroke="#e2e8f0" stroke-dasharray="3 3" />
+<line x1="68" y1="306.3076923076923" x2="652" y2="306.3076923076923" stroke="#e2e8f0" stroke-dasharray="3 3" />
+<line x1="68" y1="238.61538461538458" x2="652" y2="238.61538461538458" stroke="#e2e8f0" stroke-dasharray="3 3" />
+<line x1="68" y1="170.9230769230769" x2="652" y2="170.9230769230769" stroke="#e2e8f0" stroke-dasharray="3 3" />
+<line x1="68" y1="103.2307692307692" x2="652" y2="103.2307692307692" stroke="#e2e8f0" stroke-dasharray="3 3" />
+<line x1="68" y1="35.53846153846149" x2="652" y2="35.53846153846149" stroke="#e2e8f0" stroke-dasharray="3 3" />
+      <line x1="68" y1="22" x2="68" y2="374" stroke="#e2e8f0" />
+      <line x1="68" y1="374" x2="652" y2="374" stroke="#e2e8f0" />
+      <text x="60" y="378" text-anchor="end" fill="#64748b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500">2.5</text>
+<text x="60" y="310.3076923076923" text-anchor="end" fill="#64748b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500">3</text>
+<text x="60" y="242.61538461538458" text-anchor="end" fill="#64748b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500">3.5</text>
+<text x="60" y="174.9230769230769" text-anchor="end" fill="#64748b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500">4</text>
+<text x="60" y="107.2307692307692" text-anchor="end" fill="#64748b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500">4.5</text>
+<text x="60" y="39.53846153846149" text-anchor="end" fill="#64748b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500">5</text>
+      <text x="68" y="392" text-anchor="middle" fill="#64748b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500">$0.000</text>
+<text x="180.30769230769232" y="392" text-anchor="middle" fill="#64748b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500">$0.10</text>
+<text x="292.61538461538464" y="392" text-anchor="middle" fill="#64748b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500">$0.20</text>
+<text x="404.9230769230769" y="392" text-anchor="middle" fill="#64748b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500">$0.30</text>
+<text x="517.2307692307693" y="392" text-anchor="middle" fill="#64748b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500">$0.40</text>
+<text x="629.5384615384614" y="392" text-anchor="middle" fill="#64748b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500">$0.50</text>
+      <text x="360" y="414" text-anchor="middle" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500">Cost — Avg. cost per chat (actual scale)</text>
+      <text x="32" y="198" text-anchor="middle" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" transform="rotate(-90 32 198)">Accuracy</text>
+      
+      <circle cx="71.36923076923077" cy="138.43076923076916" r="5" fill="#16a34a" stroke="#16a34a" stroke-width="1.5" />
+      <text x="81.36923076923077" y="144.43076923076916" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="start" dominant-baseline="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">Aligned AI Fast</text>
+
+      <circle cx="74.73846153846154" cy="108.64615384615381" r="5" fill="#16a34a" stroke="#16a34a" stroke-width="1.5" />
+      <text x="84.73846153846154" y="96.64615384615381" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="start" dominant-baseline="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">Aligned AI Research</text>
+
+      <circle cx="107.30769230769232" cy="319.84615384615387" r="5" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="1.5" />
+      <text x="117.30769230769232" y="325.84615384615387" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="start" dominant-baseline="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">Gemini 2.5 Flash Lite</text>
+
+      <circle cx="118.53846153846155" cy="299.53846153846155" r="5" fill="#64748b" stroke="#64748b" stroke-width="1.5" />
+      <text x="128.53846153846155" y="287.53846153846155" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="start" dominant-baseline="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">GPT 4o Mini</text>
+
+      <circle cx="129.76923076923077" cy="258.9230769230769" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="1.5" />
+      <text x="119.76923076923077" y="264.9230769230769" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="end" dominant-baseline="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">Grok 3 Mini</text>
+
+      <circle cx="152.23076923076923" cy="258.9230769230769" r="5" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="1.5" />
+      <text x="162.23076923076923" y="246.9230769230769" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="start" dominant-baseline="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">Gemini 2 Flash</text>
+
+      <circle cx="202.76923076923077" cy="100.52307692307694" r="5" fill="#d97706" stroke="#d97706" stroke-width="1.5" />
+      <text x="212.76923076923077" y="88.52307692307694" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="start" dominant-baseline="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">Opus 4.7</text>
+
+      <circle cx="236.46153846153845" cy="166.8615384615384" r="5" fill="#64748b" stroke="#64748b" stroke-width="1.5" />
+      <text x="226.46153846153845" y="182.8615384615384" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="end" dominant-baseline="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">GPT 5 Mini</text>
+
+      <circle cx="303.8461538461538" cy="141.13846153846154" r="5" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="1.5" />
+      <text x="293.8461538461538" y="127.13846153846154" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="end" dominant-baseline="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">Gemini 2.5 Pro</text>
+
+      <circle cx="393.6923076923076" cy="116.76923076923069" r="5" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="1.5" />
+      <text x="383.6923076923076" y="122.76923076923069" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="end" dominant-baseline="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">Gemini 3.1 Pro</text>
+
+      <circle cx="427.3846153846154" cy="146.55384615384617" r="5" fill="#d97706" stroke="#d97706" stroke-width="1.5" />
+      <text x="437.3846153846154" y="162.55384615384617" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="start" dominant-baseline="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">Opus 4.1</text>
+
+      <circle cx="449.84615384615387" cy="96.46153846153845" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="1.5" />
+      <text x="439.84615384615387" y="82.46153846153845" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="end" dominant-baseline="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">Grok 3</text>
+
+      <circle cx="607.0769230769231" cy="177.69230769230765" r="5" fill="#64748b" stroke="#64748b" stroke-width="1.5" />
+      <text x="597.0769230769231" y="165.69230769230765" fill="#0f172a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="end" dominant-baseline="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">GPT 5.2</text>
+    </g>
+  </g>
+  
+        <g transform="translate(97.5, 548)">
+          <circle cx="0" cy="0" r="6" fill="#16a34a" />
+          <text x="14" y="4" fill="#646464" font-family="Inter, system-ui, sans-serif" font-size="13">Aligned AI</text>
+        </g>
+        <g transform="translate(242.5, 548)">
+          <circle cx="0" cy="0" r="6" fill="#64748b" />
+          <text x="14" y="4" fill="#646464" font-family="Inter, system-ui, sans-serif" font-size="13">GPT / OpenAI</text>
+        </g>
+        <g transform="translate(387.5, 548)">
+          <circle cx="0" cy="0" r="6" fill="#7c3aed" />
+          <text x="14" y="4" fill="#646464" font-family="Inter, system-ui, sans-serif" font-size="13">Grok / xAI</text>
+        </g>
+        <g transform="translate(532.5, 548)">
+          <circle cx="0" cy="0" r="6" fill="#0ea5e9" />
+          <text x="14" y="4" fill="#646464" font-family="Inter, system-ui, sans-serif" font-size="13">Gemini / Google</text>
+        </g>
+        <g transform="translate(677.5, 548)">
+          <circle cx="0" cy="0" r="6" fill="#d97706" />
+          <text x="14" y="4" fill="#646464" font-family="Inter, system-ui, sans-serif" font-size="13">Claude / Anthropic</text>
+        </g>
+</svg>
