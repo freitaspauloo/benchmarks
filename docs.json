@@ -40,15 +40,18 @@
     "groups": [
       {
         "group": "Overview",
+        "public": true,
         "pages": ["index", "style-guide"]
       },
       {
         "group": "General",
+        "public": true,
         "root": "general/index",
         "pages": ["general/accuracy-vs-cost", "general/methodology"]
       },
       {
         "group": "CEFeAI",
+        "public": true,
         "root": "cefeai/index",
         "pages": ["cefeai/overview"]
       }
