@@ -1,0 +1,57 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Aligned AI Benchmarks",
+  "description": "Accuracy, cost, and methodology for Aligned AI benchmark suites.",
+  "colors": {
+    "primary": "#22a06b",
+    "light": "#ebf6f2",
+    "dark": "#027864"
+  },
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Aligned AI",
+        "href": "https://joinaligned.ai"
+      },
+      {
+        "label": "Enterprise",
+        "href": "https://joinaligned.ai/enterprise"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Start for free",
+      "href": "https://joinaligned.ai/choose-plan"
+    }
+  },
+  "footer": {
+    "socials": {
+      "website": "https://joinaligned.ai"
+    }
+  },
+  "navigation": {
+    "directory": "card",
+    "groups": [
+      {
+        "group": "Overview",
+        "pages": ["index", "style-guide"]
+      },
+      {
+        "group": "General",
+        "root": "general/index",
+        "pages": ["general/accuracy-vs-cost", "general/methodology"]
+      },
+      {
+        "group": "CEFeAI",
+        "root": "cefeai/index",
+        "pages": ["cefeai/overview"]
+      }
+    ]
+  }
+}

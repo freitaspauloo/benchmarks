@@ -1,0 +1,39 @@
+---
+title: "Accuracy vs. cost"
+description: "Aligned AI Fast and Research compared to frontier models on conversation understanding."
+---
+
+## Close accuracy, lower cost
+
+<Columns cols={2}>
+  <Card title="4.24–4.46" icon="target">
+    Aligned accuracy range on the conversation-understanding set.
+  </Card>
+  <Card title="<$0.01" icon="coins">
+    Average cost per chat for Aligned AI Fast and Research modes.
+  </Card>
+</Columns>
+
+Aligned AI Fast and Research are plotted close to top Grok and Opus accuracy while staying far lower on average benchmark cost.
+
+<Note>
+  Chart asset placeholder — export the Firegraph scatter from the design pass and drop it in `/images/general/accuracy-vs-cost.png`, then wrap with `<Frame>`.
+</Note>
+
+### Top models (accuracy)
+
+| Model | Accuracy | Avg. cost / chat |
+| --- | ---: | ---: |
+| Grok 3 | 4.55 | $0.34 |
+| Opus 4.7 | 4.52 | $0.12 |
+| Aligned AI Research | 4.46 | $0.006 |
+| Gemini 3.1 Pro | 4.40 | $0.29 |
+| Aligned AI Fast | 4.24 | $0.003 |
+| Gemini 2.5 Pro | 4.22 | $0.21 |
+| Opus 4.1 | 4.18 | $0.32 |
+| GPT 5 Mini | 4.03 | $0.15 |
+| GPT 5.2 | 3.95 | $0.48 |
+
+<Warning>
+  All accuracy and cost figures were generated through internal testing by Aligned AI using a standardized conversation-understanding question set. Competitor cost figures are derived from publicly listed API pricing and converted to an average cost per chat across the benchmark set. Pricing is subject to change and may not reflect discounts, batch processing, or negotiated rates. Internal benchmarks may not be independently verified.
+</Warning>

@@ -1,0 +1,46 @@
+---
+title: "Style guide"
+description: "Mintlify component patterns for Aligned AI benchmark pages."
+---
+
+Use this page as the template before publishing new benchmark write-ups.
+
+## Voice
+
+- Lead with the metric, then the implication.
+- Keep competitor names factual; link public pricing where possible.
+- Always include the suite-specific footnote at the bottom of published pages.
+
+## Layout (Mintlify customers–inspired)
+
+<Columns cols={2}>
+  <Card title="Stat callout" icon="gauge">
+    Use a bold metric pair at the top of a card — e.g. **4.24–4.46** accuracy range with a short label.
+  </Card>
+  <Card title="Story body" icon="file-text">
+    One short paragraph explaining what the chart shows and why it matters.
+  </Card>
+</Columns>
+
+## Required footnotes
+
+<AccordionGroup>
+  <Accordion title="General — accuracy & cost">
+    All accuracy and cost figures were generated through internal testing by Aligned AI using a standardized conversation-understanding question set. Competitor cost figures are derived from publicly listed API pricing and converted to an average cost per chat across the benchmark set. Pricing is subject to change and may not reflect discounts, batch processing, or negotiated rates. Internal benchmarks may not be independently verified.
+  </Accordion>
+  <Accordion title="CEFeAI">
+    Disclaimer: Aligned's evaluation and the consortium's leaderboard were produced in separate runs; comparisons are subject to the run-to-run and judge-model variability the consortium documents in its methodology.
+  </Accordion>
+</AccordionGroup>
+
+## Charts
+
+- Firegraph-style scatter plots will be added as static assets or embedded components per suite.
+- Place the chart above insight cards; pricing tables below or in a sidebar column on wide layouts.
+
+## Components to prefer
+
+- `Card` + `Columns` for grid layouts
+- `Accordion` for methodology detail
+- `Note` / `Warning` for disclaimers inline
+- `Frame` for chart screenshots during migration

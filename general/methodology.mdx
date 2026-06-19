@@ -1,0 +1,28 @@
+---
+title: "Methodology"
+description: "How Aligned AI runs general conversation benchmarks."
+---
+
+## Question set
+
+We use a standardized conversation-understanding question set covering comprehension, follow-ups, and hallucination-sensitive prompts. Accuracy is reported on a 1–5 rubric aggregated across the suite.
+
+## Cost normalization
+
+Public API list prices are converted to an average cost per chat:
+
+1. **Input** — token pricing per 1M tokens
+2. **Output** — token pricing per 1M tokens
+3. **Average over benchmark conversations** — same denominator for every model on the scatter plot
+
+<Steps>
+  <Step title="Collect public pricing">
+    OpenAI, Google, xAI, Anthropic, and Aligned AI published rates.
+  </Step>
+  <Step title="Replay benchmark transcripts">
+    Apply token counts from the fixed question set to each model's pricing.
+  </Step>
+  <Step title="Plot accuracy vs. cost">
+    Accuracy on Y; average cost per chat on X (log or actual scale).
+  </Step>
+</Steps>

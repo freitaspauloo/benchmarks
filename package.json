@@ -1,0 +1,12 @@
+{
+  "name": "aligned-ai-benchmarks",
+  "private": true,
+  "scripts": {
+    "dev": "mint dev",
+    "validate": "mint validate",
+    "broken-links": "mint broken-links"
+  },
+  "devDependencies": {
+    "mintlify": "^4.2.631"
+  }
+}
