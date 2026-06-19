@@ -2,30 +2,16 @@
 title: "Model"
 public: true
 description: "Aligned AI Fast and Research — compound routing and benchmark modes."
-mode: "custom"
 ---
 
-import { ResearchHero, ResearchStat, ResearchStatGrid } from "/snippets/research-hero.jsx";
-
-<ResearchHero
-  eyebrow="Research"
-  title="Model"
-  description="Aligned AI is a compound product — vision, routing, safeguards, and reasoning work together per request. Benchmarks plot Fast and Research as separate modes."
-/>
-
-<ResearchStatGrid>
-  <ResearchStat value="4.24" label="Aligned AI Fast accuracy on the General benchmark" />
-  <ResearchStat value="4.46" label="Aligned AI Research accuracy on the same question set" />
-  <ResearchStat value="~$0.003" label="Average cost per chat — Fast mode" />
-  <ResearchStat value="~$0.006" label="Average cost per chat — Research mode" />
-</ResearchStatGrid>
+Aligned AI is a **compound product**: vision, structured routing, safeguards, and a main reasoning model work together per request. Benchmark pages plot **Aligned AI Fast** and **Aligned AI Research** as separate modes — not every underlying vendor model appears as its own point on the charts.
 
 <Columns cols={2}>
   <Card title="Aligned AI Fast" icon="bolt">
-    Low-cost mode for everyday conversation understanding and follow-ups.
+    Low-cost mode — plotted at **4.24** accuracy and **~$0.003** avg. cost per chat on the General benchmark.
   </Card>
   <Card title="Aligned AI Research" icon="microscope">
-    Higher-accuracy mode for harder prompts on the same benchmark set.
+    Research mode — plotted at **4.46** accuracy and **~$0.006** avg. cost per chat on the same question set.
   </Card>
 </Columns>
 

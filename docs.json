@@ -3,15 +3,6 @@
   "theme": "mint",
   "name": "Aligned AI Research",
   "description": "Benchmarks, model context, and roadmap for Aligned AI.",
-  "appearance": {
-    "default": "light",
-    "strict": true
-  },
-  "background": {
-    "color": {
-      "light": "#fafbfc"
-    }
-  },
   "colors": {
     "primary": "#22a06b",
     "light": "#ebf6f2",

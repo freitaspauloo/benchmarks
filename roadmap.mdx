@@ -2,50 +2,19 @@
 title: "Roadmap"
 public: true
 description: "Planned benchmark suites and research publications."
-mode: "custom"
 ---
 
-import { ResearchHero } from "/snippets/research-hero.jsx";
+## Published
 
-<ResearchHero
-  eyebrow="Research"
-  title="Roadmap"
-  description="What we publish today and what benchmark suites are coming next."
-/>
+- **General** — conversation understanding, accuracy vs. cost ([view benchmark](/general))
+- **CEFeAI** — religious representation and conversion bias ([view benchmark](/cefeai))
 
-<div className="research-section-label">Published</div>
-
-<div className="research-card-grid">
-  <a className="research-card" href="/general">
-    <span className="research-card-icon" aria-hidden="true">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 3v18h18" />
-        <path d="M7 14l4-4 4 4 5-6" />
-      </svg>
-    </span>
-    <h2 className="research-card-title">General benchmark</h2>
-    <p className="research-card-copy">Conversation understanding — accuracy vs. average cost per chat.</p>
-    <div className="research-card-arrow">View benchmark →</div>
-  </a>
-
-  <a className="research-card" href="/cefeai">
-    <span className="research-card-icon" aria-hidden="true">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 3v18" />
-        <path d="M5 7h14" />
-        <path d="M7 21h10" />
-        <path d="M8 11h8" />
-      </svg>
-    </span>
-    <h2 className="research-card-title">CEFeAI benchmark</h2>
-    <p className="research-card-copy">Religious representation and conversion bias across leading models.</p>
-    <div className="research-card-arrow">View benchmark →</div>
-  </a>
-</div>
-
-<div className="research-section-label">Next</div>
+## Next
 
 <AccordionGroup>
+  <Accordion title="Public access">
+    Disable Mintlify end-user authentication in the [dashboard](https://app.mintlify.com/products/authentication) so https://dudesign.mintlify.io/ is reachable without login.
+  </Accordion>
   <Accordion title="Custom domain">
     Point `research.joinaligned.ai` at this site when DNS is ready.
   </Accordion>
