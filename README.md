@@ -15,7 +15,7 @@ Open **http://localhost:3000**
 
 1. Sign in at [app.mintlify.com](https://app.mintlify.com)
 2. Create a project (or use existing org project)
-3. **Settings → Deployment → Git** — install GitHub app, connect `chriselevow/benchmarks`
+3. **Settings → Deployment → Git** — install GitHub app, connect `freitaspauloo/benchmarks` (or transfer to `chriselevow/benchmarks` first)
 4. Push this repo; Mintlify deploys on merge to main
 
 ## Mintlify MCP (Cursor)
