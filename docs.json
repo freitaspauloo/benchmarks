@@ -43,5 +43,9 @@
         "pages": ["index", "roadmap", "model", "general", "cefeai"]
       }
     ]
-  }
+  },
+  "redirects": [
+    { "source": "/general/:slug*", "destination": "/general" },
+    { "source": "/cefeai/:slug*", "destination": "/cefeai" }
+  ]
 }
