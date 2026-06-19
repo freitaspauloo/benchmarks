@@ -11,3 +11,28 @@
   background-color: #000000 !important;
   opacity: 1 !important;
 }
+
+.sidebar-group-header {
+  gap: 0.5rem;
+}
+
+.research-sidebar-back {
+  align-items: center;
+  color: #52525b;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  gap: 0.125rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.research-sidebar-back:hover {
+  color: #141414;
+}
+
+.research-sidebar-back svg {
+  height: 1rem;
+  width: 1rem;
+}
