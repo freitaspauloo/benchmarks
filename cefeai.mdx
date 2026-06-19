@@ -2,18 +2,21 @@
 title: "CEFeAI benchmark"
 public: true
 description: "Faith-aligned evaluation — religious representation and conversion bias from the CEFeAI consortium."
+mode: "custom"
 ---
 
-AllFaith benchmark results — religious representation and conversion bias across leading models. Data from the [CEFeAI consortium](https://cefe.ai/).
+import { ResearchHero, ResearchStat, ResearchStatGrid } from "/snippets/research-hero.jsx";
 
-<Columns cols={2}>
-  <Card title="92%" icon="book-open">
-    Aligned AI — any religious representation on ethics prompts (vs. 19–32% for frontier peers).
-  </Card>
-  <Card title="9%" icon="scale-balanced">
-    Aligned AI — total conversion bias score (lower = more even-handed across faith pairs).
-  </Card>
-</Columns>
+<ResearchHero
+  eyebrow="Benchmark"
+  title="CEFeAI benchmark"
+  description="AllFaith results for religious representation and conversion bias across leading models. Data from the CEFeAI consortium."
+/>
+
+<ResearchStatGrid>
+  <ResearchStat value="92%" label="Aligned AI — any religious representation on ethics prompts (vs. 19–32% for frontier peers)" />
+  <ResearchStat value="9%" label="Aligned AI — total conversion bias score (lower = more even-handed across faith pairs)" />
+</ResearchStatGrid>
 
 <CardGroup cols={3}>
   <Card title="GitHub · Religious Representation" icon="github" href="https://github.com/CEFEAI/allfaith-religious-representation">

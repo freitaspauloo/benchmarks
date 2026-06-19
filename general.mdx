@@ -2,18 +2,21 @@
 title: "General benchmark"
 public: true
 description: "Conversation understanding — accuracy vs. average cost per chat."
+mode: "custom"
 ---
 
-Conversation understanding and hallucination detection — accuracy vs. average cost per chat.
+import { ResearchHero, ResearchStat, ResearchStatGrid } from "/snippets/research-hero.jsx";
 
-<Columns cols={2}>
-  <Card title="4.24–4.46" icon="target">
-    Aligned AI accuracy range on the conversation-understanding set — 3rd and 5th in the top-10 view.
-  </Card>
-  <Card title="<$0.01" icon="coins">
-    Average cost per chat for Aligned AI Fast and Research modes.
-  </Card>
-</Columns>
+<ResearchHero
+  eyebrow="Benchmark"
+  title="General benchmark"
+  description="Conversation understanding and hallucination detection — accuracy vs. average cost per chat."
+/>
+
+<ResearchStatGrid>
+  <ResearchStat value="4.24–4.46" label="Aligned AI accuracy range — 3rd and 5th in the top-10 view" />
+  <ResearchStat value={"<$0.01"} label="Average cost per chat for Fast and Research modes" />
+</ResearchStatGrid>
 
 Aligned AI Fast and Research sit close to top Grok and Opus accuracy while staying far lower on average benchmark cost per chat. See [Model](/model) for how those modes map to the product.
 
