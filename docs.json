@@ -45,12 +45,42 @@
       {
         "group": "Research",
         "public": true,
-        "pages": ["index", "general", "cefeai", "model", "roadmap"]
+        "pages": [
+          "index",
+          {
+            "group": "General benchmark",
+            "root": "general",
+            "expanded": true,
+            "pages": [
+              "general/all-models",
+              "general/pricing-inputs",
+              "general/methodology"
+            ]
+          },
+          {
+            "group": "CEFeAI benchmark",
+            "root": "cefeai",
+            "expanded": true,
+            "pages": [
+              "cefeai/religious-representation",
+              "cefeai/conversion-bias",
+              "cefeai/bias-by-faith"
+            ]
+          },
+          {
+            "group": "Model",
+            "root": "model",
+            "expanded": true,
+            "pages": ["model/what-we-measure"]
+          },
+          {
+            "group": "Roadmap",
+            "root": "roadmap",
+            "expanded": true,
+            "pages": ["roadmap/published", "roadmap/next"]
+          }
+        ]
       }
     ]
-  },
-  "redirects": [
-    { "source": "/general/:slug*", "destination": "/general" },
-    { "source": "/cefeai/:slug*", "destination": "/cefeai" }
-  ]
+  }
 }
