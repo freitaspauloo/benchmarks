@@ -5,11 +5,13 @@ sidebarTitle: "Pricing inputs"
 description: "Public API list prices used to compute average cost per chat."
 ---
 
-| Provider | Model | Input / 1M | Output / 1M | Avg. cost / chat |
+<div className="compact-pricing-table">
+
+| Provider | Model | Input | Output | Avg / chat |
 | --- | --- | ---: | ---: | ---: |
 | Aligned AI | Fast | $0.05 | $0.08 | &lt;$0.01 |
 | Aligned AI | Research | $0.59 | $0.79 | &lt;$0.01 |
-| Google | Gemini 2.5 Flash Lite | $0.10 | $0.40 | $0.035 |
+| Google | Flash Lite 2.5 | $0.10 | $0.40 | $0.035 |
 | OpenAI | GPT 4o Mini | $0.15 | $0.60 | $0.045 |
 | xAI | Grok 3 Mini | $0.30 | $0.50 | $0.055 |
 | Anthropic | Opus 4.7 | $5.00 | $25.00 | $0.12 |
@@ -18,6 +20,8 @@ description: "Public API list prices used to compute average cost per chat."
 | xAI | Grok 3 | $3.00 | $15.00 | $0.34 |
 | OpenAI | GPT 5.2 | $1.75 | $14.00 | $0.48 |
 
+</div>
+
 <Note>
-  **Aligned AI Fast and Research** — list input/output rates are from Aligned AI’s published API pricing. **Avg. cost / chat** is computed over the fixed benchmark conversation set (same methodology as competitors). Research mode’s list rates reflect the compound routing stack used per request; both modes land under **$0.01** average cost per chat on this benchmark.
+  **Input** and **Output** are public API list prices per 1M tokens. **Avg / chat** is computed over the fixed benchmark conversation set. **Aligned AI Fast and Research** list rates are from Aligned AI’s published API pricing; Research reflects the compound routing stack per request. Both modes land under **$0.01** average cost per chat on this benchmark.
 </Note>

@@ -36,3 +36,24 @@
   height: 1rem;
   width: 1rem;
 }
+
+.compact-pricing-table table {
+  font-size: 0.8125rem;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.compact-pricing-table th,
+.compact-pricing-table td {
+  min-width: 0 !important;
+  padding: 0.45rem 0.5rem !important;
+}
+
+.compact-pricing-table th {
+  white-space: nowrap;
+}
+
+.compact-pricing-table td:nth-child(2) {
+  white-space: normal;
+  word-break: break-word;
+}
