@@ -3,28 +3,12 @@ title: "Benchmarks"
 public: true
 sidebarTitle: "Benchmarks"
 description: "Aligned AI research — benchmarks, model notes, and what we publish here."
-mode: "custom"
 ---
 
-<div className="mx-auto w-full max-w-4xl px-6 py-16">
-  <div className="text-center">
-    <span className="inline-flex rounded-full bg-[#ebf6f2] px-3 py-1 text-xs font-semibold text-[#027864] dark:bg-[#027864]/20 dark:text-[#7dd3af]">
-      Research
-    </span>
+Public benchmark runs, model context, and roadmap — separate from API docs. We publish accuracy vs. cost results here as new suites ship.
 
-    <h1 className="mt-6 text-balance text-4xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl">
-      Aligned AI benchmarks & research
-    </h1>
-
-    <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-7 text-zinc-600 dark:text-zinc-400 sm:text-lg">
-      Public benchmark runs, model context, and roadmap — separate from API docs.
-      We publish accuracy vs. cost results here as new suites ship.
-    </p>
-  </div>
-
-  <div className="mt-10 sm:mt-12">
-    <Tabs>
-      <Tab title="General" id="general">
+<Tabs>
+  <Tab title="General" id="general">
 
 Conversation understanding and hallucination detection — accuracy vs. average cost per chat.
 
@@ -42,7 +26,7 @@ Aligned AI Fast and Research sit close to top Grok and Opus accuracy while stayi
 <Tabs>
   <Tab title="Log scale">
     <Frame caption="Accuracy vs. average cost per chat. Aligned AI Fast and Research cluster near frontier accuracy at a fraction of the cost.">
-      <img src="/images/general-accuracy-vs-cost-log.svg" alt="Scatter plot of model accuracy versus average cost per chat on a log cost scale." />
+      <img src="/images/general-accuracy-vs-cost-log.png" alt="Scatter plot of model accuracy versus average cost per chat on a log cost scale." />
     </Frame>
   </Tab>
   <Tab title="Actual scale">
@@ -100,9 +84,9 @@ Aligned AI Fast and Research sit close to top Grok and Opus accuracy while stayi
   All accuracy and cost figures were generated through internal testing by Aligned AI using a standardized conversation-understanding question set. Competitor cost figures are derived from publicly listed API pricing and converted to an average cost per chat across the benchmark set. Pricing is subject to change and may not reflect discounts, batch processing, or negotiated rates. Internal benchmarks may not be independently verified.
 </Warning>
 
-      </Tab>
+  </Tab>
 
-      <Tab title="CEFeAI" id="cefeai">
+  <Tab title="CEFeAI" id="cefeai">
 
 AllFaith benchmark results — religious representation and conversion bias across leading models. Data from the [CEFeAI consortium](https://cefe.ai/).
 
@@ -211,9 +195,9 @@ Papers: [When AI Takes Sides on Questions of Faith](https://arxiv.org/search/?qu
   Aligned's evaluation and the consortium's leaderboard were produced in separate runs; comparisons are subject to the run-to-run and judge-model variability the consortium documents in its methodology.
 </Warning>
 
-      </Tab>
+  </Tab>
 
-      <Tab title="Model" id="model">
+  <Tab title="Model" id="model">
 
 Aligned AI is a **compound product**: vision, structured routing, safeguards, and a main reasoning model work together per request. Benchmark pages plot **Aligned AI Fast** and **Aligned AI Research** as separate modes — not every underlying vendor model appears as its own point on the charts.
 
@@ -236,9 +220,9 @@ Cost is normalized from public API list prices to an **average cost per chat** o
   Single-vendor leaderboard snapshots elsewhere (MMLU, Arena, etc.) show individual foundation models for context — the compound product is not one bar in each of those charts.
 </Note>
 
-      </Tab>
+  </Tab>
 
-      <Tab title="Roadmap" id="roadmap">
+  <Tab title="Roadmap" id="roadmap">
 
 ## Published
 
@@ -259,11 +243,9 @@ Cost is normalized from public API list prices to an **average cost per chat** o
   </Accordion>
 </AccordionGroup>
 
-      </Tab>
-    </Tabs>
-  </div>
+  </Tab>
+</Tabs>
 
-  <Note>
-    API reference and developer docs stay on the main product site. This research site is for benchmark transparency and methodology.
-  </Note>
-</div>
+<Note>
+  API reference and developer docs stay on the main product site. This research site is for benchmark transparency and methodology.
+</Note>
