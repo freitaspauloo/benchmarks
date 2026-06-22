@@ -49,9 +49,8 @@
           "index",
           {
             "group": "General benchmark",
-            "root": "general",
-            "expanded": true,
             "pages": [
+              "general",
               "general/all-models",
               "general/pricing-inputs",
               "general/methodology"
@@ -59,9 +58,8 @@
           },
           {
             "group": "CEFeAI benchmark",
-            "root": "cefeai",
-            "expanded": true,
             "pages": [
+              "cefeai",
               "cefeai/religious-representation",
               "cefeai/conversion-bias",
               "cefeai/bias-by-faith"
@@ -69,15 +67,11 @@
           },
           {
             "group": "Model",
-            "root": "model",
-            "expanded": true,
-            "pages": ["model/what-we-measure"]
+            "pages": ["model", "model/what-we-measure"]
           },
           {
             "group": "Roadmap",
-            "root": "roadmap",
-            "expanded": true,
-            "pages": ["roadmap/published", "roadmap/next"]
+            "pages": ["roadmap", "roadmap/published", "roadmap/next"]
           }
         ]
       }
