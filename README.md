@@ -2,7 +2,7 @@
 
 Benchmark content for Aligned AI — separate from the `faithful` app repo.
 
-**Live site:** https://dudesign.mintlify.io/
+**Live site:** https://dudesign.mintlify.app/
 
 **Repo:** https://github.com/freitaspauloo/benchmarks — push to `main` → Mintlify auto-deploys.
 
@@ -12,11 +12,13 @@ Benchmark content for Aligned AI — separate from the `faithful` app repo.
 
 | URL | Page |
 |-----|------|
-| https://dudesign.mintlify.io/ | Introduction |
-| https://dudesign.mintlify.io/roadmap | Roadmap |
-| https://dudesign.mintlify.io/model | Model |
-| https://dudesign.mintlify.io/general | General benchmark (Firegraph + tables) |
-| https://dudesign.mintlify.io/cefeai | CEFeAI benchmark |
+| https://dudesign.mintlify.app/ | Benchmarks (single page with tabs) |
+| https://dudesign.mintlify.app/#general | General benchmark tab |
+| https://dudesign.mintlify.app/#cefeai | CEFeAI benchmark tab |
+| https://dudesign.mintlify.app/#model | Model tab |
+| https://dudesign.mintlify.app/#roadmap | Roadmap tab |
+
+Legacy paths (`/general`, `/cefeai`, `/model`, `/roadmap`) redirect to the matching tab anchor.
 
 ## Local preview
 
@@ -31,17 +33,13 @@ Open **http://localhost:3000**
 
 Repo: https://github.com/freitaspauloo/benchmarks
 
-Push to `main` → Mintlify deploys to https://dudesign.mintlify.io/
+Push to `main` → Mintlify deploys to https://dudesign.mintlify.app/
 
 ## Structure
 
 | File | Purpose |
 |------|---------|
-| `index.mdx` | Introduction |
-| `roadmap.mdx` | Roadmap |
-| `model.mdx` | Model (Fast / Research) |
-| `general.mdx` | General benchmark suite |
-| `cefeai.mdx` | CEFeAI benchmark suite |
+| `index.mdx` | Single benchmarks page — General, CEFeAI, Model, Roadmap tabs |
 | `images/` | Firegraph + CEFeAI chart SVGs |
 | `scripts/` | `npm run generate:assets` to regenerate charts |
 
