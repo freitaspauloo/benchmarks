@@ -5,15 +5,19 @@ sidebarTitle: "Pricing inputs"
 description: "Public API list prices used to compute average cost per chat."
 ---
 
-| Provider | Model | Input / 1M | Output / 1M |
-| --- | --- | ---: | ---: |
-| Aligned AI | Fast | $0.05 | $0.08 |
-| Aligned AI | Research | $0.59 | $0.79 |
-| Google | Gemini 2.5 Flash Lite | $0.10 | $0.40 |
-| OpenAI | GPT 4o Mini | $0.15 | $0.60 |
-| xAI | Grok 3 Mini | $0.30 | $0.50 |
-| Anthropic | Opus 4.7 | $5.00 | $25.00 |
-| OpenAI | GPT 5 Mini | $0.25 | $2.00 |
-| Google | Gemini 2.5 Pro | $1.25 | $10.00 |
-| xAI | Grok 3 | $3.00 | $15.00 |
-| OpenAI | GPT 5.2 | $1.75 | $14.00 |
+| Provider | Model | Input / 1M | Output / 1M | Avg. cost / chat |
+| --- | --- | ---: | ---: | ---: |
+| Aligned AI | Fast | $0.05 | $0.08 | <$0.01 |
+| Aligned AI | Research | $0.59 | $0.79 | <$0.01 |
+| Google | Gemini 2.5 Flash Lite | $0.10 | $0.40 | $0.035 |
+| OpenAI | GPT 4o Mini | $0.15 | $0.60 | $0.045 |
+| xAI | Grok 3 Mini | $0.30 | $0.50 | $0.055 |
+| Anthropic | Opus 4.7 | $5.00 | $25.00 | $0.12 |
+| OpenAI | GPT 5 Mini | $0.25 | $2.00 | $0.15 |
+| Google | Gemini 2.5 Pro | $1.25 | $10.00 | $0.21 |
+| xAI | Grok 3 | $3.00 | $15.00 | $0.34 |
+| OpenAI | GPT 5.2 | $1.75 | $14.00 | $0.48 |
+
+<Note>
+  **Aligned AI Fast and Research** — list input/output rates are from Aligned AI’s published API pricing. **Avg. cost / chat** is computed over the fixed benchmark conversation set (same methodology as competitors). Research mode’s list rates reflect the compound routing stack used per request; both modes land under **$0.01** average cost per chat on this benchmark.
+</Note>
