@@ -1,0 +1,112 @@
+---
+title: "CEFeAI benchmark"
+public: true
+description: "Faith-aligned evaluation — religious representation and conversion bias from the CEFeAI consortium."
+---
+
+AllFaith benchmark results — religious representation and conversion bias across leading models. Data from the [CEFeAI consortium](https://cefe.ai/).
+
+<Columns cols={2}>
+  <Card title="92%" icon="book-open">
+    Aligned AI — any religious representation on ethics prompts (vs. 19–32% for frontier peers).
+  </Card>
+  <Card title="9%" icon="scale-balanced">
+    Aligned AI — total conversion bias score (lower = more even-handed across faith pairs).
+  </Card>
+</Columns>
+
+<CardGroup cols={3}>
+  <Card title="GitHub · Religious Representation" icon="github" href="https://github.com/CEFEAI/allfaith-religious-representation">
+    AFB_ReligiousRepresentation_v.1_2Q26
+  </Card>
+  <Card title="GitHub · Conversion Bias" icon="github" href="https://github.com/CEFEAI/allfaith-conversion-bias">
+    AFB_ConversionBias_v.2_2Q26
+  </Card>
+  <Card title="cefe.ai dashboard" icon="globe" href="https://cefe.ai/">
+    Consortium leaderboard and methodology
+  </Card>
+</CardGroup>
+
+## Religious representation
+
+The Religious Representation benchmark measures how frequently religious content appears in AI responses to ethics questions. Questions were drawn from a nationally representative survey of Americans. Each response was independently scored on a sliding scale from no religious content to predominantly religious content.
+
+**AFB_ReligiousRepresentation_v.1_2Q26** · Data collected May 2026 · 150 questions × 7 models
+
+<Frame caption="Meaningful religious reference (score 2+) — share of prompts where models include substantive faith content.">
+  <img src="/images/cefeai-religious-representation-meaningful.svg" alt="Horizontal bar chart of meaningful religious representation by model." />
+</Frame>
+
+| Model | No rep. | Any rep. | Meaningful | Balanced | Predom. |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Aligned AI | 8% | 92% | 61% | 44% | 31% |
+| Llama 4 Maverick | 68% | 32% | 18% | 9% | 5% |
+| Gemini 2.5 Pro | 74% | 26% | 15% | 8% | 4% |
+| GPT-4o | 76% | 24% | 14% | 7% | 3% |
+| Mistral Large | 77% | 23% | 13% | 6% | 3% |
+| Grok 3 | 79% | 21% | 12% | 6% | 2% |
+| Claude 3.5 Sonnet | 81% | 19% | 11% | 5% | 2% |
+
+<AccordionGroup>
+  <Accordion title="Metric definitions">
+    - **No representation** — score 0, no religious content
+    - **Any representation** — scores 1–4, any religious content present
+    - **Meaningful reference** — score 2+, substantive faith content
+    - **Balanced** — score 3, religious and secular content balanced
+    - **Predominantly religious** — score 4, response is mostly religious
+  </Accordion>
+  <Accordion title="Precision">
+    Each bar is computed from N=150 observations per model. Chart shading in the interactive app uses 95% Wilson confidence intervals — ranges that would contain the true score in about 95% of comparable benchmark runs. Intervals reflect sampling variability over the question set only.
+  </Accordion>
+</AccordionGroup>
+
+Papers: [Omissive Bias in Religious Representation](https://arxiv.org/search/?query=Omissive+Bias+in+Religious+Representation) (arXiv search)
+
+## Conversion bias
+
+The Conversion Bias benchmark tests to what degree models push users toward or away from particular faith traditions by asking models for guidance about conversion from one faith to another. Lower total bias indicates more even-handed responses across faith pairs.
+
+**AFB_ConversionBias_v.2_2Q26** · Data collected May 2026 · 14 faiths × 7 models
+
+<Frame caption="Total conversion bias as a percentage of worst-case — lower is better.">
+  <img src="/images/cefeai-conversion-bias-total.svg" alt="Horizontal bar chart of total conversion bias by model." />
+</Frame>
+
+| Model | Total bias |
+| --- | ---: |
+| Aligned AI | 9% |
+| Llama 4 Maverick | 27% |
+| Claude 3.5 Sonnet | 29% |
+| Gemini 2.5 Pro | 31% |
+| Mistral Large | 33% |
+| GPT-4o | 34% |
+| Grok 3 | 38% |
+
+### Bias by model and faith
+
+Darker cells indicate stronger directional bias on conversion-style prompts. Latter-day Saint column highlighted in the in-app view.
+
+| Model | Agnostic | Atheist | Bahá'í | Buddhist | Catholic | Evang. Prot. | Hindu | JW | Jewish | LDS | Mainline | Shia | Sikh | Sunni |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Aligned AI | 8 | 8 | 9 | 9 | 10 | 12 | 8 | 17 | 10 | **6** | 6 | 12 | 12 | 12 |
+| GPT-4o | 33 | 33 | 34 | 34 | 35 | 37 | 33 | 42 | 35 | 38 | 31 | 37 | 37 | 37 |
+| Claude 3.5 Sonnet | 28 | 28 | 29 | 29 | 30 | 32 | 28 | 37 | 30 | 33 | 26 | 32 | 32 | 32 |
+| Gemini 2.5 Pro | 30 | 30 | 31 | 31 | 32 | 34 | 30 | 39 | 32 | 35 | 28 | 34 | 34 | 34 |
+| Grok 3 | 37 | 37 | 38 | 38 | 39 | 41 | 37 | 46 | 39 | 42 | 35 | 41 | 41 | 41 |
+| Llama 4 Maverick | 26 | 26 | 27 | 27 | 28 | 30 | 26 | 35 | 28 | 31 | 24 | 30 | 30 | 30 |
+| Mistral Large | 32 | 32 | 33 | 33 | 34 | 36 | 32 | 41 | 34 | 37 | 30 | 36 | 36 | 36 |
+
+<AccordionGroup>
+  <Accordion title="How total bias is computed">
+    Each total-bias score is computed from N=182 underlying pairwise ratings per model. Treat differences smaller than about 5 percentage points as within noise on the total-bias chart.
+  </Accordion>
+  <Accordion title="Comparative faith bias">
+    The consortium also reports encouraging vs. discouraging conversion bias multipliers relative to baseline — for example, Latter-day Saint prompts show higher encouraging bias on several frontier models. See the [consortium dashboard](https://cefe.ai/) for interactive toggles.
+  </Accordion>
+</AccordionGroup>
+
+Papers: [When AI Takes Sides on Questions of Faith](https://arxiv.org/search/?query=When+AI+Takes+Sides+on+Questions+of+Faith) (arXiv search)
+
+<Warning>
+  Aligned's evaluation and the consortium's leaderboard were produced in separate runs; comparisons are subject to the run-to-run and judge-model variability the consortium documents in its methodology.
+</Warning>

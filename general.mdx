@@ -1,0 +1,79 @@
+---
+title: "General benchmark"
+public: true
+description: "Conversation understanding — accuracy vs. average cost per chat."
+---
+
+Conversation understanding and hallucination detection — accuracy vs. average cost per chat.
+
+<Columns cols={2}>
+  <Card title="4.24–4.46" icon="target">
+    Aligned AI accuracy range on the conversation-understanding set — 3rd and 5th in the top-10 view.
+  </Card>
+  <Card title="<$0.01" icon="coins">
+    Average cost per chat for Aligned AI Fast and Research modes.
+  </Card>
+</Columns>
+
+Aligned AI Fast and Research sit close to top Grok and Opus accuracy while staying far lower on average benchmark cost per chat. See [Model](/model) for how those modes map to the product.
+
+<Tabs>
+  <Tab title="Log scale">
+    <Frame caption="Accuracy vs. average cost per chat. Aligned AI Fast and Research cluster near frontier accuracy at a fraction of the cost.">
+      <img src="/images/general-accuracy-vs-cost-log.png" alt="Scatter plot of model accuracy versus average cost per chat on a log cost scale." />
+    </Frame>
+  </Tab>
+  <Tab title="Actual scale">
+    <Frame caption="Same benchmark with linear cost axis — frontier models spread toward the right.">
+      <img src="/images/general-accuracy-vs-cost-actual.svg" alt="Scatter plot of model accuracy versus average cost per chat on a linear cost scale." />
+    </Frame>
+  </Tab>
+</Tabs>
+
+## All models (by accuracy)
+
+| Model | Provider | Accuracy | Avg. cost / chat |
+| --- | --- | ---: | ---: |
+| Grok 3 | xAI | 4.55 | $0.34 |
+| Opus 4.7 | Anthropic | 4.52 | $0.12 |
+| Aligned AI Research | Aligned AI | 4.46 | $0.006 |
+| Gemini 3.1 Pro Preview | Google | 4.40 | $0.29 |
+| Aligned AI Fast | Aligned AI | 4.24 | $0.003 |
+| Gemini 2.5 Pro | Google | 4.22 | $0.21 |
+| Opus 4.1 | Anthropic | 4.18 | $0.32 |
+| GPT 5 Mini | OpenAI | 4.03 | $0.15 |
+| GPT 5.2 | OpenAI | 3.95 | $0.48 |
+| Grok 3 Mini | xAI | 3.35 | $0.055 |
+| Gemini 2 Flash | Google | 3.35 | $0.075 |
+| GPT 4o Mini | OpenAI | 3.05 | $0.045 |
+| Gemini 2.5 Flash Lite | Google | 2.90 | $0.035 |
+
+## Pricing inputs (public API rates)
+
+| Provider | Model | Input / 1M | Output / 1M |
+| --- | --- | ---: | ---: |
+| Aligned AI | Fast | $0.05 | $0.08 |
+| Aligned AI | Research | $0.59 | $0.79 |
+| Google | Gemini 2.5 Flash Lite | $0.10 | $0.40 |
+| OpenAI | GPT 4o Mini | $0.15 | $0.60 |
+| xAI | Grok 3 Mini | $0.30 | $0.50 |
+| Anthropic | Opus 4.7 | $5.00 | $25.00 |
+| OpenAI | GPT 5 Mini | $0.25 | $2.00 |
+| Google | Gemini 2.5 Pro | $1.25 | $10.00 |
+| xAI | Grok 3 | $3.00 | $15.00 |
+| OpenAI | GPT 5.2 | $1.75 | $14.00 |
+
+## Methodology
+
+<AccordionGroup>
+  <Accordion title="Question set">
+    We use a standardized conversation-understanding question set covering comprehension, follow-ups, and hallucination-sensitive prompts. Accuracy is reported on a 1–5 rubric aggregated across the suite.
+  </Accordion>
+  <Accordion title="Cost normalization">
+    Public API list prices convert to average cost per chat: input $/1M + output $/1M, replayed over the fixed benchmark transcripts, then plotted on the scatter chart (log or actual scale).
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+  All accuracy and cost figures were generated through internal testing by Aligned AI using a standardized conversation-understanding question set. Competitor cost figures are derived from publicly listed API pricing and converted to an average cost per chat across the benchmark set. Pricing is subject to change and may not reflect discounts, batch processing, or negotiated rates. Internal benchmarks may not be independently verified.
+</Warning>

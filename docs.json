@@ -45,18 +45,12 @@
       {
         "group": "Research",
         "public": true,
-        "pages": ["index"]
+        "pages": ["index", "general", "cefeai", "model", "roadmap"]
       }
     ]
   },
   "redirects": [
-    { "source": "/general", "destination": "/#general" },
-    { "source": "/general/:slug*", "destination": "/#general" },
-    { "source": "/cefeai", "destination": "/#cefeai" },
-    { "source": "/cefeai/:slug*", "destination": "/#cefeai" },
-    { "source": "/model", "destination": "/#model" },
-    { "source": "/model/:slug*", "destination": "/#model" },
-    { "source": "/roadmap", "destination": "/#roadmap" },
-    { "source": "/roadmap/:slug*", "destination": "/#roadmap" }
+    { "source": "/general/:slug*", "destination": "/general" },
+    { "source": "/cefeai/:slug*", "destination": "/cefeai" }
   ]
 }
