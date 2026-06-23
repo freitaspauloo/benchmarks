@@ -60,7 +60,13 @@
 
 .benchmarks-page-shell {
   margin-inline: auto;
-  max-width: 80rem;
+  max-width: 64rem;
+  width: 100%;
+}
+
+.benchmarks-intro-shell {
+  margin-inline: auto;
+  max-width: 64rem;
   width: 100%;
 }
 
@@ -105,8 +111,15 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
   border: none !important;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 0 !important;
+  margin-bottom: 1.25rem !important;
   padding-bottom: 0 !important;
+}
+
+.benchmarks-hero-tabs .tab-container,
+.benchmarks-hero-tabs [role="tabpanel"] {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
 }
 
 .benchmarks-hero-tabs [role="tab"] > div {
@@ -134,7 +147,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
   display: grid;
   gap: 1.25rem;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-  margin-top: 1.25rem;
+  margin-top: 0;
   padding: 1.25rem;
 }
 
@@ -218,7 +231,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
   border-radius: 0.875rem;
   display: flex;
   justify-content: center;
-  min-height: 18rem;
+  min-height: 16rem;
   overflow: hidden;
   padding: 1rem;
 }
@@ -226,7 +239,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 .benchmarks-feature-preview img {
   border-radius: 0.625rem;
   box-shadow: 0 12px 40px rgba(15, 23, 42, 0.12);
-  max-height: 22rem;
+  max-height: 18rem;
   object-fit: contain;
   width: 100%;
 }
