@@ -57,3 +57,22 @@
   white-space: normal;
   word-break: break-word;
 }
+
+.benchmarks-page-shell {
+  margin-inline: auto;
+  max-width: 80rem;
+  width: 100%;
+}
+
+.benchmarks-page-shell img {
+  width: 100%;
+}
+
+html[data-page-mode="wide"] #content-area,
+html[data-page-mode="wide"] #content-container {
+  max-width: none;
+}
+
+html[data-page-mode="wide"] .benchmarks-page-shell table {
+  width: 100%;
+}

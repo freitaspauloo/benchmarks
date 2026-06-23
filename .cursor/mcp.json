@@ -4,7 +4,17 @@
       "url": "https://mintlify.com/docs/mcp"
     },
     "mintlify": {
-      "url": "https://mcp.mintlify.com"
+      "command": "node",
+      "args": [
+        "scripts/mintlify-admin-mcp-bridge.mjs"
+      ],
+      "env": {
+        "MINTLIFY_MCP_CLIENT_ID": "${env:MINTLIFY_MCP_CLIENT_ID}",
+        "MINTLIFY_MCP_CLIENT_SECRET": "${env:MINTLIFY_MCP_CLIENT_SECRET}"
+      }
+    },
+    "aligned-benchmarks": {
+      "url": "https://dudesign.mintlify.io/mcp"
     }
   }
 }
