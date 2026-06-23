@@ -325,3 +325,8 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
   font-size: 0.9375rem;
   margin: 0 0 1rem;
 }
+
+.benchmarks-page-shell span[data-as="p"] + div:has(> [data-name="frame"]),
+.benchmarks-page-shell p + div:has(> [data-name="frame"]) {
+  margin-top: 1.25rem;
+}
