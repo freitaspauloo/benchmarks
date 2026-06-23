@@ -8,7 +8,162 @@ mode: wide
 
 <div className="benchmarks-page-shell">
 
-Public benchmark runs, model context, and roadmap — separate from API docs. We publish accuracy vs. cost results here as new suites ship.
+<div className="benchmarks-hero">
+  <h1 className="benchmarks-hero-title">Benchmarks & research, all in one place</h1>
+  <p className="benchmarks-hero-subtitle">
+    Public accuracy vs. cost runs, faith-aligned evaluation, and model context — separate from API docs. We publish results here as new suites ship.
+  </p>
+</div>
+
+<div className="benchmarks-hero-tabs">
+<Tabs>
+  <Tab title="General">
+    <div className="benchmarks-feature-panel">
+      <div className="benchmarks-feature-list">
+        <a href="#general-benchmark" className="benchmarks-feature-row">
+          <span className="benchmarks-feature-icon benchmarks-feature-icon-green">◎</span>
+          <span className="benchmarks-feature-copy">
+            <span className="benchmarks-feature-title">Accuracy vs. cost</span>
+            <span className="benchmarks-feature-desc">Conversation understanding — Aligned AI Fast and Research near frontier accuracy at &lt;$0.01 per chat.</span>
+          </span>
+          <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
+        </a>
+        <a href="#all-models-by-accuracy" className="benchmarks-feature-row">
+          <span className="benchmarks-feature-icon benchmarks-feature-icon-green">▤</span>
+          <span className="benchmarks-feature-copy">
+            <span className="benchmarks-feature-title">All models leaderboard</span>
+            <span className="benchmarks-feature-desc">Full ranking by accuracy with average cost per chat across the benchmark set.</span>
+          </span>
+          <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
+        </a>
+        <a href="#pricing-inputs-public-api-rates" className="benchmarks-feature-row">
+          <span className="benchmarks-feature-icon benchmarks-feature-icon-green">$</span>
+          <span className="benchmarks-feature-copy">
+            <span className="benchmarks-feature-title">Pricing inputs</span>
+            <span className="benchmarks-feature-desc">Public API list prices converted to average benchmark cost per chat.</span>
+          </span>
+          <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
+        </a>
+      </div>
+      <div className="benchmarks-feature-preview">
+        <img src="/images/general-accuracy-vs-cost-log.png" alt="General benchmark scatter plot — accuracy vs. cost." />
+      </div>
+    </div>
+  </Tab>
+
+  <Tab title="CEFeAI">
+    <div className="benchmarks-feature-panel">
+      <div className="benchmarks-feature-list">
+        <a href="#cefeai-benchmark" className="benchmarks-feature-row">
+          <span className="benchmarks-feature-icon benchmarks-feature-icon-green">✦</span>
+          <span className="benchmarks-feature-copy">
+            <span className="benchmarks-feature-title">CEFeAI overview</span>
+            <span className="benchmarks-feature-desc">AllFaith results — 92% religious representation, 9% conversion bias for Aligned AI.</span>
+          </span>
+          <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
+        </a>
+        <a href="#religious-representation" className="benchmarks-feature-row">
+          <span className="benchmarks-feature-icon benchmarks-feature-icon-green">☰</span>
+          <span className="benchmarks-feature-copy">
+            <span className="benchmarks-feature-title">Religious representation</span>
+            <span className="benchmarks-feature-desc">How often models include substantive faith content on ethics prompts.</span>
+          </span>
+          <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
+        </a>
+        <a href="#conversion-bias" className="benchmarks-feature-row">
+          <span className="benchmarks-feature-icon benchmarks-feature-icon-green">⚖</span>
+          <span className="benchmarks-feature-copy">
+            <span className="benchmarks-feature-title">Conversion bias</span>
+            <span className="benchmarks-feature-desc">Directional bias when models advise on conversion between faith traditions.</span>
+          </span>
+          <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
+        </a>
+      </div>
+      <div className="benchmarks-feature-preview">
+        <img src="/images/cefeai-religious-representation-meaningful.svg" alt="CEFeAI religious representation benchmark chart." />
+      </div>
+    </div>
+  </Tab>
+
+  <Tab title="Model">
+    <div className="benchmarks-feature-panel">
+      <div className="benchmarks-feature-list">
+        <a href="#model" className="benchmarks-feature-row">
+          <span className="benchmarks-feature-icon benchmarks-feature-icon-green">⚡</span>
+          <span className="benchmarks-feature-copy">
+            <span className="benchmarks-feature-title">Aligned AI Fast</span>
+            <span className="benchmarks-feature-desc">Low-cost compound mode — 4.24 accuracy, &lt;$0.01 avg. cost per chat.</span>
+          </span>
+          <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
+        </a>
+        <a href="#model" className="benchmarks-feature-row">
+          <span className="benchmarks-feature-icon benchmarks-feature-icon-green">🔬</span>
+          <span className="benchmarks-feature-copy">
+            <span className="benchmarks-feature-title">Aligned AI Research</span>
+            <span className="benchmarks-feature-desc">Research compound mode — 4.46 accuracy, &lt;$0.01 avg. cost per chat.</span>
+          </span>
+          <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
+        </a>
+        <a href="#what-the-benchmarks-measure" className="benchmarks-feature-row">
+          <span className="benchmarks-feature-icon benchmarks-feature-icon-green">◈</span>
+          <span className="benchmarks-feature-copy">
+            <span className="benchmarks-feature-title">What we measure</span>
+            <span className="benchmarks-feature-desc">How Fast and Research map to the compound product on benchmark charts.</span>
+          </span>
+          <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
+        </a>
+      </div>
+      <div className="benchmarks-feature-preview benchmarks-feature-preview-cards">
+        <div className="benchmarks-preview-card">
+          <span className="benchmarks-preview-label">Fast</span>
+          <span className="benchmarks-preview-stat">4.24</span>
+          <span className="benchmarks-preview-meta">accuracy · &lt;$0.01 / chat</span>
+        </div>
+        <div className="benchmarks-preview-card benchmarks-preview-card-accent">
+          <span className="benchmarks-preview-label">Research</span>
+          <span className="benchmarks-preview-stat">4.46</span>
+          <span className="benchmarks-preview-meta">accuracy · &lt;$0.01 / chat</span>
+        </div>
+      </div>
+    </div>
+  </Tab>
+
+  <Tab title="Roadmap">
+    <div className="benchmarks-feature-panel">
+      <div className="benchmarks-feature-list">
+        <a href="#published" className="benchmarks-feature-row">
+          <span className="benchmarks-feature-icon benchmarks-feature-icon-green">✓</span>
+          <span className="benchmarks-feature-copy">
+            <span className="benchmarks-feature-title">Published suites</span>
+            <span className="benchmarks-feature-desc">General benchmark and CEFeAI faith-aligned evaluation are live today.</span>
+          </span>
+          <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
+        </a>
+        <a href="#next" className="benchmarks-feature-row">
+          <span className="benchmarks-feature-icon benchmarks-feature-icon-green">→</span>
+          <span className="benchmarks-feature-copy">
+            <span className="benchmarks-feature-title">Coming next</span>
+            <span className="benchmarks-feature-desc">Custom domain, public access, and additional benchmark suites.</span>
+          </span>
+          <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
+        </a>
+      </div>
+      <div className="benchmarks-feature-preview benchmarks-feature-preview-roadmap">
+        <div className="benchmarks-preview-card">
+          <span className="benchmarks-preview-label">Live</span>
+          <span className="benchmarks-preview-stat">2</span>
+          <span className="benchmarks-preview-meta">benchmark suites published</span>
+        </div>
+      </div>
+    </div>
+  </Tab>
+</Tabs>
+</div>
+
+<div className="benchmarks-detail-header">
+  <h2 className="benchmarks-detail-title">Explore benchmarks</h2>
+  <p className="benchmarks-detail-subtitle">Full methodology, tables, and disclaimers below.</p>
+</div>
 
 <Note>
   API reference and developer docs stay on the main product site. This research site is for benchmark transparency and methodology.

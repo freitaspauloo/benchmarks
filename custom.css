@@ -76,3 +76,218 @@ html[data-page-mode="wide"] #content-container {
 html[data-page-mode="wide"] .benchmarks-page-shell table {
   width: 100%;
 }
+
+.benchmarks-hero {
+  margin-bottom: 2rem;
+  max-width: 44rem;
+}
+
+.benchmarks-hero-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 0.875rem;
+}
+
+.benchmarks-hero-subtitle {
+  color: #71717a;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.benchmarks-hero-tabs {
+  margin-bottom: 3rem;
+}
+
+.benchmarks-hero-tabs [role="tablist"] {
+  border: none !important;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.benchmarks-hero-tabs [role="tab"] > div {
+  background: #fff;
+  border: 1px solid #e4e4e7;
+  border-bottom: 1px solid #e4e4e7 !important;
+  border-radius: 9999px;
+  color: #18181b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.45rem 1rem;
+}
+
+.benchmarks-hero-tabs [role="tab"][aria-selected="true"] > div,
+.benchmarks-hero-tabs [role="tab"] [data-active="true"] {
+  background: #111 !important;
+  border-color: #111 !important;
+  color: #fff !important;
+}
+
+.benchmarks-feature-panel {
+  background: #fafafa;
+  border: 1px solid #e4e4e7;
+  border-radius: 1rem;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+}
+
+@media (max-width: 960px) {
+  .benchmarks-feature-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+.benchmarks-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.benchmarks-feature-row {
+  align-items: center;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  color: inherit;
+  display: flex;
+  gap: 0.875rem;
+  padding: 0.875rem 1rem;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.benchmarks-feature-row:hover {
+  background: #f4f4f5;
+  border-color: #e4e4e7;
+}
+
+.benchmarks-feature-icon {
+  align-items: center;
+  border-radius: 0.625rem;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  height: 2.25rem;
+  justify-content: center;
+  width: 2.25rem;
+}
+
+.benchmarks-feature-icon-green {
+  background: #ebf6f2;
+  color: #027864;
+}
+
+.benchmarks-feature-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.benchmarks-feature-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.benchmarks-feature-desc {
+  color: #71717a;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.benchmarks-feature-chevron {
+  color: #a1a1aa;
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.benchmarks-feature-preview {
+  align-items: center;
+  background: linear-gradient(145deg, #ebf6f2 0%, #d7f0e6 55%, #c8ead9 100%);
+  border-radius: 0.875rem;
+  display: flex;
+  justify-content: center;
+  min-height: 18rem;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.benchmarks-feature-preview img {
+  border-radius: 0.625rem;
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.12);
+  max-height: 22rem;
+  object-fit: contain;
+  width: 100%;
+}
+
+.benchmarks-feature-preview-cards,
+.benchmarks-feature-preview-roadmap {
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.benchmarks-preview-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 0.875rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.25rem 1.5rem;
+  width: min(100%, 18rem);
+}
+
+.benchmarks-preview-card-accent {
+  background: #fff;
+}
+
+.benchmarks-preview-label {
+  color: #027864;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.benchmarks-preview-stat {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.benchmarks-preview-meta {
+  color: #71717a;
+  font-size: 0.8125rem;
+}
+
+.benchmarks-detail-header {
+  border-top: 1px solid #e4e4e7;
+  margin-bottom: 1.5rem;
+  padding-top: 2.5rem;
+}
+
+.benchmarks-detail-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.35rem;
+}
+
+.benchmarks-detail-subtitle {
+  color: #71717a;
+  font-size: 0.9375rem;
+  margin: 0 0 1rem;
+}
