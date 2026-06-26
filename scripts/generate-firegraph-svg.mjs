@@ -169,6 +169,7 @@ const INK = "#0f172a";
 const MUTED = "#64748b";
 const GRID = "#e2e8f0";
 const SURFACE = "#ffffff";
+const CHART_RADIUS = 12;
 
 function logCost(cost) {
   return Math.log10(cost);
@@ -380,7 +381,7 @@ function buildChart({ costScale, filename, titleSuffix, variant = "full" }) {
       <stop offset="100%" stop-color="#e4e4e7" />
     </linearGradient>
   </defs>
-  <rect width="100%" height="100%" fill="url(#${gradId})" rx="12" />
+  <rect width="100%" height="100%" fill="url(#${gradId})" rx="${CHART_RADIUS}" />
   <text x="${canvasW / 2}" y="${titleY}" text-anchor="middle" fill="#52525b" font-family="Inter, system-ui, sans-serif" font-size="${isHero ? 13 : 14}" font-weight="500">Accuracy vs. Cost</text>
   <g transform="translate(${chartOffsetX}, ${chartOffsetY})">
     ${chartInner}

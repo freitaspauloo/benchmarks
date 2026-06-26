@@ -58,6 +58,16 @@
   word-break: break-word;
 }
 
+.benchmarks-page-shell,
+.benchmarks-intro-shell,
+.benchmarks-feature-panel,
+.benchmarks-feature-preview,
+.benchmarks-chart-frame {
+  --benchmarks-radius-sm: 0.625rem;
+  --benchmarks-radius: 0.75rem;
+  --benchmarks-radius-lg: 1rem;
+}
+
 .benchmarks-page-shell {
   margin-inline: auto;
   max-width: 64rem;
@@ -170,7 +180,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
   align-items: stretch;
   background: #fafafa;
   border: 1px solid #e4e4e7;
-  border-radius: 1rem;
+  border-radius: var(--benchmarks-radius-lg);
   display: grid;
   gap: 1.25rem;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
@@ -194,7 +204,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
   align-items: center;
   background: #fff;
   border: 1px solid transparent;
-  border-radius: 0.75rem;
+  border-radius: var(--benchmarks-radius);
   color: inherit;
   display: flex;
   gap: 0.875rem;
@@ -210,7 +220,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 
 .benchmarks-feature-icon {
   align-items: center;
-  border-radius: 0.625rem;
+  border-radius: var(--benchmarks-radius-sm);
   display: inline-flex;
   flex-shrink: 0;
   font-size: 0.875rem;
@@ -255,7 +265,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 .benchmarks-feature-preview {
   background: linear-gradient(145deg, #fafafa 0%, #f4f4f5 55%, #ececee 100%);
   border: none;
-  border-radius: 0.75rem;
+  border-radius: var(--benchmarks-radius);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,7 +293,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 
 .benchmarks-feature-preview img,
 .benchmarks-feature-preview object {
-  border-radius: 0.75rem;
+  border-radius: var(--benchmarks-radius);
   box-shadow: none;
   display: block;
   height: auto;
@@ -298,7 +308,9 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 
 .benchmarks-feature-preview picture,
 .benchmarks-feature-preview span.contents {
+  border-radius: var(--benchmarks-radius);
   display: block !important;
+  overflow: hidden;
   width: 100% !important;
 }
 
@@ -313,7 +325,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 .benchmarks-preview-card {
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 0.875rem;
+  border-radius: var(--benchmarks-radius);
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
   display: flex;
   flex-direction: column;
@@ -373,7 +385,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 }
 
 .benchmarks-chart-frame {
-  border-radius: 0.75rem;
+  border-radius: var(--benchmarks-radius);
   line-height: 0;
   margin: 0;
   overflow: hidden;
@@ -383,7 +395,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 .benchmarks-chart-frame img,
 .benchmarks-chart-frame picture,
 .benchmarks-chart-frame span.contents img {
-  border-radius: 0.75rem;
+  border-radius: var(--benchmarks-radius);
   display: block !important;
   height: auto !important;
   max-width: 100%;
@@ -399,7 +411,9 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 
 .benchmarks-chart-frame > span,
 .benchmarks-chart-frame span.contents {
+  border-radius: var(--benchmarks-radius);
   display: block !important;
+  overflow: hidden;
   width: 100% !important;
 }
 
@@ -422,6 +436,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 }
 
 .benchmarks-page-shell [data-name="frame"] img {
+  border-radius: var(--benchmarks-radius);
   display: block;
   height: auto;
   object-fit: initial;

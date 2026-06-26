@@ -1,6 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 329" width="640" height="329" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Meaningful religious reference (score 2+)">
 <style>text{font-family:Inter,system-ui,sans-serif}</style>
-<rect width="100%" height="100%" fill="#f4f4f5"/>
+<defs>
+  <linearGradient id="chart-bg-hero" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#fafafa" />
+    <stop offset="55%" stop-color="#f4f4f5" />
+    <stop offset="100%" stop-color="#e4e4e7" />
+  </linearGradient>
+</defs>
+<rect width="100%" height="100%" fill="url(#chart-bg-hero)" rx="12" />
 <text x="320.0" y="30.22222222222222" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Meaningful religious reference (score 2+)</text>
 <line x1="131.6" y1="42.22222222222222" x2="131.6" y2="263.11111111111114" stroke="#e2e8f0" stroke-dasharray="4 4"/>
 <text x="131.6" y="280.8888888888889" text-anchor="middle" font-size="10" fill="#64748b">0%</text>
@@ -12,25 +19,25 @@
 <text x="480.9" y="280.8888888888889" text-anchor="middle" font-size="10" fill="#64748b">75%</text>
 <line x1="597.3" y1="42.22222222222222" x2="597.3" y2="263.11111111111114" stroke="#e2e8f0" stroke-dasharray="4 4"/>
 <text x="597.3" y="280.8888888888889" text-anchor="middle" font-size="10" fill="#64748b">100%</text>
-<rect x="131.55555555555554" y="54.22222222222222" width="284.1" height="20" rx="3" fill="#18181b" fill-opacity="1"/>
+<rect x="131.55555555555554" y="54.22222222222222" width="284.1" height="20" rx="4" fill="#18181b" fill-opacity="1"/>
 <text x="123.55555555555554" y="68.22222222222223" text-anchor="end" font-size="11" fill="#0f172a">Aligned AI</text>
 <text x="421.7" y="68.22222222222223" font-size="10" fill="#64748b">61%</text>
-<rect x="131.55555555555554" y="86.22222222222223" width="83.8" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<rect x="131.55555555555554" y="86.22222222222223" width="83.8" height="20" rx="4" fill="#cbd5e1" fill-opacity="0.85"/>
 <text x="123.55555555555554" y="100.22222222222223" text-anchor="end" font-size="11" fill="#0f172a">Llama 4 Maverick</text>
 <text x="221.4" y="100.22222222222223" font-size="10" fill="#64748b">18%</text>
-<rect x="131.55555555555554" y="118.22222222222223" width="69.9" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<rect x="131.55555555555554" y="118.22222222222223" width="69.9" height="20" rx="4" fill="#cbd5e1" fill-opacity="0.85"/>
 <text x="123.55555555555554" y="132.22222222222223" text-anchor="end" font-size="11" fill="#0f172a">Gemini 2.5 Pro</text>
 <text x="207.4" y="132.22222222222223" font-size="10" fill="#64748b">15%</text>
-<rect x="131.55555555555554" y="150.22222222222223" width="65.2" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<rect x="131.55555555555554" y="150.22222222222223" width="65.2" height="20" rx="4" fill="#cbd5e1" fill-opacity="0.85"/>
 <text x="123.55555555555554" y="164.22222222222223" text-anchor="end" font-size="11" fill="#0f172a">GPT-4o</text>
 <text x="202.8" y="164.22222222222223" font-size="10" fill="#64748b">14%</text>
-<rect x="131.55555555555554" y="182.22222222222223" width="60.6" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<rect x="131.55555555555554" y="182.22222222222223" width="60.6" height="20" rx="4" fill="#cbd5e1" fill-opacity="0.85"/>
 <text x="123.55555555555554" y="196.22222222222223" text-anchor="end" font-size="11" fill="#0f172a">Mistral Large</text>
 <text x="198.1" y="196.22222222222223" font-size="10" fill="#64748b">13%</text>
-<rect x="131.55555555555554" y="214.22222222222223" width="55.9" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<rect x="131.55555555555554" y="214.22222222222223" width="55.9" height="20" rx="4" fill="#cbd5e1" fill-opacity="0.85"/>
 <text x="123.55555555555554" y="228.22222222222223" text-anchor="end" font-size="11" fill="#0f172a">Grok 3</text>
 <text x="193.4" y="228.22222222222223" font-size="10" fill="#64748b">12%</text>
-<rect x="131.55555555555554" y="246.22222222222223" width="51.2" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<rect x="131.55555555555554" y="246.22222222222223" width="51.2" height="20" rx="4" fill="#cbd5e1" fill-opacity="0.85"/>
 <text x="123.55555555555554" y="260.22222222222223" text-anchor="end" font-size="11" fill="#0f172a">Claude 3.5 Sonnet</text>
 <text x="188.8" y="260.22222222222223" font-size="10" fill="#64748b">11%</text>
 <text x="320.0" y="304" text-anchor="middle" font-size="11" fill="#64748b">Share of 150 ethics prompts (%)</text>

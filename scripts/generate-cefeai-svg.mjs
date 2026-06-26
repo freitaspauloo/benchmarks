@@ -86,6 +86,7 @@ const MUTED = "#64748b";
 const GRID = "#e2e8f0";
 const ALIGNED = "#18181b";
 const OTHER = "#cbd5e1";
+const CHART_RADIUS = 12;
 
 function escapeXml(value) {
   return value
@@ -158,7 +159,7 @@ function horizontalBarChart({
       const y = plotTop + i * rowH + 8;
       const barW = (row[valueKey] / maxValue) * plotW;
       const fill = row.vendor === "aligned" ? ALIGNED : OTHER;
-      return `<rect x="${left}" y="${y}" width="${barW.toFixed(1)}" height="20" rx="3" fill="${fill}" fill-opacity="${row.vendor === "aligned" ? 1 : 0.85}"/>
+      return `<rect x="${left}" y="${y}" width="${barW.toFixed(1)}" height="20" rx="4" fill="${fill}" fill-opacity="${row.vendor === "aligned" ? 1 : 0.85}"/>
 <text x="${left - 8}" y="${y + 14}" text-anchor="end" font-size="11" fill="${INK}">${escapeXml(row.model)}</text>
 <text x="${(left + barW + 6).toFixed(1)}" y="${y + 14}" font-size="10" fill="${MUTED}">${row[valueKey]}%</text>`;
     })
@@ -180,9 +181,17 @@ function horizontalBarChart({
     )
     .join("\n");
 
+  const gradId = hero ? "chart-bg-hero" : "chart-bg";
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${escapeXml(title)}">
 <style>text{font-family:Inter,system-ui,sans-serif}</style>
-<rect width="100%" height="100%" fill="#f4f4f5"/>
+<defs>
+  <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#fafafa" />
+    <stop offset="55%" stop-color="#f4f4f5" />
+    <stop offset="100%" stop-color="#e4e4e7" />
+  </linearGradient>
+</defs>
+<rect width="100%" height="100%" fill="url(#${gradId})" rx="${CHART_RADIUS}" />
 <text x="${(width / 2).toFixed(1)}" y="${cardPad + 16}" text-anchor="middle" font-size="13" font-weight="600" fill="${INK}">${escapeXml(title)}</text>
 ${grid}
 ${bars}
