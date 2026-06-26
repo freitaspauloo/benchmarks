@@ -164,17 +164,12 @@ function buildChart({ costScale, filename, titleSuffix }) {
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${canvasW}" height="600" viewBox="0 0 ${canvasW} 600" role="img" aria-label="Accuracy vs cost scatter plot${titleSuffix ? `, ${titleSuffix}` : ""}">
   <defs>
-    <linearGradient id="firegraph-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#dff5e6" />
-      <stop offset="55%" stop-color="#6ed98a" />
-      <stop offset="100%" stop-color="#4ecf72" />
-    </linearGradient>
     <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="130%">
       <feDropShadow dx="0" dy="8" stdDeviation="15" flood-color="rgba(15,23,42,0.08)" />
     </filter>
   </defs>
-  <rect width="100%" height="100%" fill="url(#firegraph-bg)" rx="16" />
-  <rect x="${cardX}" y="${cardY}" width="${cardW}" height="${cardH}" rx="12" fill="rgba(255,255,255,0.95)" filter="url(#card-shadow)" />
+  <rect width="100%" height="100%" fill="#ffffff" rx="16" />
+  <rect x="${cardX}" y="${cardY}" width="${cardW}" height="${cardH}" rx="12" fill="#ffffff" filter="url(#card-shadow)" />
   <circle cx="${cardX + 20}" cy="${cardY + 20}" r="6" fill="#d4d4d8" />
   <circle cx="${cardX + 36}" cy="${cardY + 20}" r="6" fill="#d4d4d8" />
   <circle cx="${cardX + 52}" cy="${cardY + 20}" r="6" fill="#d4d4d8" />
