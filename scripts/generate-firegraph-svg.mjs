@@ -380,7 +380,7 @@ function buildChart({ costScale, filename, titleSuffix, variant = "full" }) {
       <stop offset="100%" stop-color="#e4e4e7" />
     </linearGradient>
   </defs>
-  <rect width="100%" height="100%" fill="url(#${gradId})" rx="${isHero ? 12 : 0}" />
+  <rect width="100%" height="100%" fill="url(#${gradId})" rx="12" />
   <text x="${canvasW / 2}" y="${titleY}" text-anchor="middle" fill="#52525b" font-family="Inter, system-ui, sans-serif" font-size="${isHero ? 13 : 14}" font-weight="500">Accuracy vs. Cost</text>
   <g transform="translate(${chartOffsetX}, ${chartOffsetY})">
     ${chartInner}

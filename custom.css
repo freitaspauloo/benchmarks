@@ -283,7 +283,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 
 .benchmarks-feature-preview img,
 .benchmarks-feature-preview object {
-  border-radius: 0;
+  border-radius: 0.75rem;
   box-shadow: none;
   display: block;
   height: auto;
@@ -381,7 +381,9 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 }
 
 .benchmarks-chart-frame img,
-.benchmarks-chart-frame picture {
+.benchmarks-chart-frame picture,
+.benchmarks-chart-frame span.contents img {
+  border-radius: 0.75rem;
   display: block !important;
   height: auto !important;
   max-width: 100%;
