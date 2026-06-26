@@ -27,19 +27,138 @@ const VENDOR_LABELS = {
 };
 
 const POINTS = [
-  { label: "Aligned AI Fast", vendor: "aligned", cost: 0.003, accuracy: 4.24, labelDx: 10, labelDy: 6, labelAnchor: "start" },
-  { label: "Aligned AI Research", vendor: "aligned", cost: 0.006, accuracy: 4.46, labelDx: 10, labelDy: -12, labelAnchor: "start" },
-  { label: "Gemini 2.5 Flash Lite", vendor: "google", cost: 0.035, accuracy: 2.9, labelDx: 10, labelDy: 6, labelAnchor: "start" },
-  { label: "GPT 4o Mini", vendor: "openai", cost: 0.045, accuracy: 3.05, labelDx: 10, labelDy: -12, labelAnchor: "start" },
-  { label: "Grok 3 Mini", vendor: "xai", cost: 0.055, accuracy: 3.35, labelDx: -10, labelDy: 6, labelAnchor: "end" },
-  { label: "Gemini 2 Flash", vendor: "google", cost: 0.075, accuracy: 3.35, labelDx: 10, labelDy: -12, labelAnchor: "start" },
-  { label: "Opus 4.7", vendor: "anthropic", cost: 0.12, accuracy: 4.52, labelDx: 10, labelDy: -12, labelAnchor: "start" },
-  { label: "GPT 5 Mini", vendor: "openai", cost: 0.15, accuracy: 4.03, labelDx: -10, labelDy: 16, labelAnchor: "end" },
-  { label: "Gemini 2.5 Pro", vendor: "google", cost: 0.21, accuracy: 4.22, labelDx: -10, labelDy: -14, labelAnchor: "end" },
-  { label: "Gemini 3.1 Pro", vendor: "google", cost: 0.29, accuracy: 4.4, labelDx: -10, labelDy: 6, labelAnchor: "end" },
-  { label: "Opus 4.1", vendor: "anthropic", cost: 0.32, accuracy: 4.18, labelDx: 10, labelDy: 16, labelAnchor: "start" },
-  { label: "Grok 3", vendor: "xai", cost: 0.34, accuracy: 4.55, labelDx: -10, labelDy: -14, labelAnchor: "end" },
-  { label: "GPT 5.2", vendor: "openai", cost: 0.48, accuracy: 3.95, labelDx: -10, labelDy: -12, labelAnchor: "end" },
+  {
+    label: "Aligned AI Fast",
+    vendor: "aligned",
+    cost: 0.003,
+    accuracy: 4.24,
+    labelDx: 10,
+    labelDy: -16,
+    labelAnchor: "start",
+  },
+  {
+    label: "Aligned AI Research",
+    vendor: "aligned",
+    cost: 0.006,
+    accuracy: 4.46,
+    labelDx: 10,
+    labelDy: -16,
+    labelAnchor: "start",
+  },
+  {
+    label: "Gemini 2.5 Flash Lite",
+    vendor: "google",
+    cost: 0.035,
+    accuracy: 2.9,
+    labelDx: 10,
+    labelDy: 16,
+    labelAnchor: "start",
+  },
+  {
+    label: "GPT 4o Mini",
+    vendor: "openai",
+    cost: 0.045,
+    accuracy: 3.05,
+    labelDx: 10,
+    labelDy: 16,
+    labelAnchor: "start",
+  },
+  {
+    label: "Grok 3 Mini",
+    vendor: "xai",
+    cost: 0.055,
+    accuracy: 3.35,
+    labelDx: -10,
+    labelDy: -16,
+    labelAnchor: "end",
+  },
+  {
+    label: "Gemini 2 Flash",
+    vendor: "google",
+    cost: 0.075,
+    accuracy: 3.35,
+    labelDx: 10,
+    labelDy: 16,
+    labelAnchor: "start",
+  },
+  {
+    label: "Opus 4.7",
+    vendor: "anthropic",
+    cost: 0.12,
+    accuracy: 4.52,
+    labelDx: -10,
+    labelDy: -18,
+    labelAnchor: "end",
+  },
+  {
+    label: "GPT 5 Mini",
+    vendor: "openai",
+    cost: 0.15,
+    accuracy: 4.03,
+    labelDx: -10,
+    labelDy: 18,
+    labelAnchor: "end",
+  },
+  {
+    label: "Gemini 2.5 Pro",
+    vendor: "google",
+    cost: 0.21,
+    accuracy: 4.22,
+    labelDx: -10,
+    labelDy: -18,
+    labelAnchor: "end",
+  },
+  {
+    label: "Gemini 3.1 Pro",
+    vendor: "google",
+    cost: 0.29,
+    accuracy: 4.4,
+    labelDx: 10,
+    labelDy: 20,
+    labelAnchor: "start",
+  },
+  {
+    label: "Opus 4.1",
+    vendor: "anthropic",
+    cost: 0.32,
+    accuracy: 4.18,
+    labelDx: -10,
+    labelDy: 20,
+    labelAnchor: "end",
+  },
+  {
+    label: "Grok 3",
+    vendor: "xai",
+    cost: 0.34,
+    accuracy: 4.55,
+    labelDx: -10,
+    labelDy: -30,
+    labelAnchor: "end",
+  },
+  {
+    label: "GPT 5.2",
+    vendor: "openai",
+    cost: 0.48,
+    accuracy: 3.95,
+    labelDx: -10,
+    labelDy: 20,
+    labelAnchor: "end",
+  },
+];
+
+const LABEL_OFFSETS = [
+  { dx: 10, dy: -16, anchor: "start" },
+  { dx: 10, dy: 16, anchor: "start" },
+  { dx: -10, dy: -16, anchor: "end" },
+  { dx: -10, dy: 16, anchor: "end" },
+  { dx: 10, dy: -28, anchor: "start" },
+  { dx: 10, dy: 28, anchor: "start" },
+  { dx: -10, dy: -28, anchor: "end" },
+  { dx: -10, dy: 28, anchor: "end" },
+  { dx: 14, dy: 0, anchor: "start" },
+  { dx: -14, dy: 0, anchor: "end" },
+  { dx: 0, dy: -18, anchor: "middle" },
+  { dx: 0, dy: 18, anchor: "middle" },
 ];
 
 const COST_TICKS = [0.001, 0.003, 0.006, 0.02, 0.05, 0.1, 0.2, 0.4, 0.5];
@@ -69,6 +188,79 @@ function escapeXml(value) {
     .replaceAll('"', "&quot;");
 }
 
+function labelBox(label, lx, ly, anchor) {
+  const width = label.length * 6.2;
+  const height = 14;
+  const x =
+    anchor === "end" ? lx - width : anchor === "middle" ? lx - width / 2 : lx;
+  return { x, y: ly - height / 2, width, height };
+}
+
+function boxesOverlap(a, b, pad = 5) {
+  return !(
+    a.x + a.width + pad <= b.x ||
+    b.x + b.width + pad <= a.x ||
+    a.y + a.height + pad <= b.y ||
+    b.y + b.height + pad <= a.y
+  );
+}
+
+function resolveLabelPlacements(points, toX, toY) {
+  const sorted = [...points].sort((a, b) => {
+    const score = (p) => toY(p.accuracy) * 2 + toX(p.cost) / 100;
+    return score(a) - score(b);
+  });
+
+  const placedBoxes = [];
+
+  for (const point of sorted) {
+    const cx = toX(point.cost);
+    const cy = toY(point.accuracy);
+    const fixed =
+      point.labelDx != null && point.labelDy != null && point.labelAnchor;
+
+    const candidates = fixed
+      ? [
+          {
+            dx: point.labelDx,
+            dy: point.labelDy,
+            anchor: point.labelAnchor,
+          },
+          ...LABEL_OFFSETS,
+        ]
+      : LABEL_OFFSETS;
+
+    let chosen = candidates[candidates.length - 1];
+    let chosenBox = labelBox(
+      point.label,
+      cx + chosen.dx,
+      cy + chosen.dy,
+      chosen.anchor,
+    );
+
+    for (const offset of candidates) {
+      const candidate = labelBox(
+        point.label,
+        cx + offset.dx,
+        cy + offset.dy,
+        offset.anchor,
+      );
+      if (!placedBoxes.some((existing) => boxesOverlap(candidate, existing))) {
+        chosen = offset;
+        chosenBox = candidate;
+        break;
+      }
+    }
+
+    placedBoxes.push(chosenBox);
+    point.labelDx = chosen.dx;
+    point.labelDy = chosen.dy;
+    point.labelAnchor = chosen.anchor;
+  }
+
+  return points;
+}
+
 function buildChart({ costScale, filename, titleSuffix }) {
   const isLog = costScale === "log";
   const chartW = 720;
@@ -92,6 +284,12 @@ function buildChart({ costScale, filename, titleSuffix }) {
 
   const toY = (accuracy) => plotY + ((yMax - accuracy) / (yMax - yMin)) * plotH;
 
+  const labeledPoints = resolveLabelPlacements(
+    POINTS.map((point) => ({ ...point })),
+    toX,
+    toY,
+  );
+
   const xTicks = isLog
     ? COST_TICKS.map((c) => ({ value: logCost(c), label: COST_TICKS_WITHOUT_LABEL.has(c) ? "" : formatCost(c) }))
     : [0, 0.1, 0.2, 0.3, 0.4, 0.5].map((v) => ({ value: v, label: formatCost(v) }));
@@ -114,7 +312,7 @@ function buildChart({ costScale, filename, titleSuffix }) {
     })
     .join("\n");
 
-  const points = POINTS.map((p) => {
+  const points = labeledPoints.map((p) => {
     const cx = toX(p.cost);
     const cy = toY(p.accuracy);
     const color = VENDOR_COLORS[p.vendor];
@@ -170,9 +368,6 @@ function buildChart({ costScale, filename, titleSuffix }) {
   </defs>
   <rect width="100%" height="100%" fill="#ffffff" rx="16" />
   <rect x="${cardX}" y="${cardY}" width="${cardW}" height="${cardH}" rx="12" fill="#ffffff" filter="url(#card-shadow)" />
-  <circle cx="${cardX + 20}" cy="${cardY + 20}" r="6" fill="#d4d4d8" />
-  <circle cx="${cardX + 36}" cy="${cardY + 20}" r="6" fill="#d4d4d8" />
-  <circle cx="${cardX + 52}" cy="${cardY + 20}" r="6" fill="#d4d4d8" />
   <text x="${canvasW / 2}" y="${cardY + 24}" text-anchor="middle" fill="#52525b" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500">Accuracy vs. Cost</text>
   <g transform="translate(${cardX + 20}, ${cardY + 44})">
     ${chartInner}
