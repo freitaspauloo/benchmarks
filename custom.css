@@ -64,6 +64,11 @@
   width: 100%;
 }
 
+.benchmarks-page-shell h2,
+.benchmarks-page-shell h3 {
+  scroll-margin-top: 6rem;
+}
+
 .benchmarks-intro-shell {
   margin-inline: auto;
   max-width: 64rem;

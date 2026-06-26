@@ -80,5 +80,20 @@
         ]
       }
     ]
-  }
+  },
+  "redirects": [
+    { "source": "/general", "destination": "/#general-benchmark" },
+    { "source": "/general/all-models", "destination": "/#all-models-by-accuracy" },
+    { "source": "/general/pricing-inputs", "destination": "/#pricing-inputs-public-api-rates" },
+    { "source": "/general/methodology", "destination": "/#methodology" },
+    { "source": "/cefeai", "destination": "/#cefeai-benchmark" },
+    { "source": "/cefeai/religious-representation", "destination": "/#religious-representation" },
+    { "source": "/cefeai/conversion-bias", "destination": "/#conversion-bias" },
+    { "source": "/cefeai/bias-by-faith", "destination": "/#bias-by-model-and-faith" },
+    { "source": "/model", "destination": "/#model" },
+    { "source": "/model/what-we-measure", "destination": "/#what-the-benchmarks-measure" },
+    { "source": "/roadmap", "destination": "/#roadmap" },
+    { "source": "/roadmap/published", "destination": "/#published" },
+    { "source": "/roadmap/next", "destination": "/#next" }
+  ]
 }

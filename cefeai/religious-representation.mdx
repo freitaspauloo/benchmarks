@@ -5,41 +5,6 @@ description: "How frequently religious content appears in AI responses to ethics
 mode: wide
 ---
 
-<div className="benchmarks-page-shell">
+<meta httpEquiv="refresh" content="0; url=/#religious-representation" />
 
-The Religious Representation benchmark measures how frequently religious content appears in AI responses to ethics questions. Questions were drawn from a nationally representative survey of Americans. Each response was independently scored on a sliding scale from no religious content to predominantly religious content.
-
-**AFB_ReligiousRepresentation_v.1_2Q26** · Data collected May 2026 · 150 questions × 7 models
-
-<div
-  className="benchmarks-chart-frame benchmarks-chart-frame--embed benchmarks-chart-frame--cefeai-religious"
-  role="img"
-  aria-label="Horizontal bar chart of meaningful religious representation by model."
-/>
-
-| Model | No rep. | Any rep. | Meaningful | Balanced | Predom. |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| Aligned AI | 8% | 92% | 61% | 44% | 31% |
-| Llama 4 Maverick | 68% | 32% | 18% | 9% | 5% |
-| Gemini 2.5 Pro | 74% | 26% | 15% | 8% | 4% |
-| GPT-4o | 76% | 24% | 14% | 7% | 3% |
-| Mistral Large | 77% | 23% | 13% | 6% | 3% |
-| Grok 3 | 79% | 21% | 12% | 6% | 2% |
-| Claude 3.5 Sonnet | 81% | 19% | 11% | 5% | 2% |
-
-<AccordionGroup>
-  <Accordion title="Metric definitions">
-    - **No representation** — score 0, no religious content
-    - **Any representation** — scores 1–4, any religious content present
-    - **Meaningful reference** — score 2+, substantive faith content
-    - **Balanced** — score 3, religious and secular content balanced
-    - **Predominantly religious** — score 4, response is mostly religious
-  </Accordion>
-  <Accordion title="Precision">
-    Each bar is computed from N=150 observations per model. Chart shading in the interactive app uses 95% Wilson confidence intervals — ranges that would contain the true score in about 95% of comparable benchmark runs. Intervals reflect sampling variability over the question set only.
-  </Accordion>
-</AccordionGroup>
-
-Papers: [Omissive Bias in Religious Representation](https://arxiv.org/search/?query=Omissive+Bias+in+Religious+Representation) (arXiv search)
-
-</div>
+[Continue to Religious representation](/#religious-representation)
