@@ -102,6 +102,7 @@ function horizontalBarChart({
   invertBetter,
   title,
   xLabel,
+  footnote,
   filename,
 }) {
   const sorted = [...rows].sort((a, b) =>
@@ -110,7 +111,15 @@ function horizontalBarChart({
 
   const width = 720;
   const rowH = 36;
-  const margin = { top: 28, right: 48, bottom: 40, left: 148 };
+  const cardPad = 20;
+  const titleBlock = 28;
+  const footnoteBlock = footnote ? 24 : 0;
+  const margin = {
+    top: cardPad + titleBlock + 8,
+    right: 48,
+    bottom: 36 + footnoteBlock,
+    left: 148,
+  };
   const height = margin.top + margin.bottom + sorted.length * rowH;
   const plotW = width - margin.left - margin.right;
 
@@ -130,16 +139,22 @@ function horizontalBarChart({
     .map((t) => {
       const x = margin.left + (t / maxValue) * plotW;
       return `<line x1="${x.toFixed(1)}" y1="${margin.top - 4}" x2="${x.toFixed(1)}" y2="${height - margin.bottom}" stroke="${GRID}" stroke-dasharray="4 4"/>
-<text x="${x.toFixed(1)}" y="${height - 14}" text-anchor="middle" font-size="10" fill="${MUTED}">${t}%</text>`;
+<text x="${x.toFixed(1)}" y="${height - margin.bottom + 16}" text-anchor="middle" font-size="10" fill="${MUTED}">${t}%</text>`;
     })
     .join("\n");
 
+  const footnoteEl = footnote
+    ? `<text x="${(width / 2).toFixed(1)}" y="${height - 8}" text-anchor="middle" font-size="10" fill="${MUTED}">${escapeXml(footnote)}</text>`
+    : "";
+
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-label="${escapeXml(title)}">
 <style>text{font-family:Inter,system-ui,sans-serif}</style>
-<text x="${margin.left}" y="18" font-size="13" font-weight="600" fill="${INK}">${escapeXml(title)}</text>
+<rect width="100%" height="100%" fill="#f4f4f5" rx="12"/>
+<text x="${(width / 2).toFixed(1)}" y="${cardPad + 14}" text-anchor="middle" font-size="13" font-weight="600" fill="${INK}">${escapeXml(title)}</text>
 ${grid}
 ${bars}
-<text x="${(width / 2).toFixed(1)}" y="${height - 2}" text-anchor="middle" font-size="11" fill="${MUTED}">${escapeXml(xLabel)}</text>
+<text x="${(width / 2).toFixed(1)}" y="${height - margin.bottom + 30}" text-anchor="middle" font-size="11" fill="${MUTED}">${escapeXml(xLabel)}</text>
+${footnoteEl}
 </svg>`;
 
   writeFileSync(join(OUT_DIR, filename), svg, "utf8");
@@ -156,6 +171,8 @@ function main() {
     invertBetter: false,
     title: "Meaningful religious reference (score 2+)",
     xLabel: "Share of 150 ethics prompts (%)",
+    footnote:
+      "Meaningful religious reference (score 2+) — share of prompts where models include substantive faith content.",
     filename: "cefeai-religious-representation-meaningful.svg",
   });
 
@@ -166,6 +183,7 @@ function main() {
     invertBetter: true,
     title: "Total conversion bias (lower is better)",
     xLabel: "Bias as % of worst-case",
+    footnote: "Total conversion bias as a percentage of worst-case — lower is better.",
     filename: "cefeai-conversion-bias-total.svg",
   });
 }

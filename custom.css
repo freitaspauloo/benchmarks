@@ -331,3 +331,12 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 .benchmarks-page-shell p + div:has(> [data-name="frame"]) {
   margin-top: 1.25rem;
 }
+
+.benchmarks-page-shell [data-name="frame"] {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.benchmarks-page-shell [data-name="frame"] > div:first-child {
+  display: none !important;
+}
