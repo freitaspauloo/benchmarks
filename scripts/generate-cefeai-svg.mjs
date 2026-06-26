@@ -84,8 +84,8 @@ export { buildFaithBiasHeatmap, CONVERSION_FAITHS, CONVERSION_BIAS_FULL };
 const INK = "#0f172a";
 const MUTED = "#64748b";
 const GRID = "#e2e8f0";
-const ALIGNED = "#059669";
-const OTHER = "#94a3b8";
+const ALIGNED = "#18181b";
+const OTHER = "#cbd5e1";
 
 function escapeXml(value) {
   return value
