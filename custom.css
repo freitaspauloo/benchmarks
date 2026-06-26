@@ -214,9 +214,9 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
   width: 2.25rem;
 }
 
-.benchmarks-feature-icon-green {
-  background: #ebf6f2;
-  color: #027864;
+.benchmarks-feature-icon-muted {
+  background: #f4f4f5;
+  color: #52525b;
 }
 
 .benchmarks-feature-copy {
@@ -248,7 +248,8 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 
 .benchmarks-feature-preview {
   align-items: center;
-  background: linear-gradient(145deg, #ebf6f2 0%, #d7f0e6 55%, #c8ead9 100%);
+  background: linear-gradient(145deg, #fafafa 0%, #f4f4f5 55%, #ececee 100%);
+  border: 1px solid #e4e4e7;
   border-radius: 0.875rem;
   display: flex;
   justify-content: center;
@@ -288,7 +289,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 }
 
 .benchmarks-preview-label {
-  color: #027864;
+  color: #52525b;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.04em;

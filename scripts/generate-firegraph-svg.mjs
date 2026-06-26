@@ -11,11 +11,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_DIR = join(__dirname, "..", "images");
 
 const VENDOR_COLORS = {
-  aligned: "#16a34a",
-  openai: "#64748b",
-  xai: "#7c3aed",
-  google: "#0ea5e9",
-  anthropic: "#d97706",
+  aligned: "#18181b",
+  openai: "#52525b",
+  xai: "#71717a",
+  google: "#a1a1aa",
+  anthropic: "#d4d4d8",
 };
 
 const VENDOR_LABELS = {
