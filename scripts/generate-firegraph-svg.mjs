@@ -362,11 +362,16 @@ function buildChart({ costScale, filename, titleSuffix }) {
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${canvasW}" height="600" viewBox="0 0 ${canvasW} 600" role="img" aria-label="Accuracy vs cost scatter plot${titleSuffix ? `, ${titleSuffix}` : ""}">
   <defs>
+    <linearGradient id="chart-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fafafa" />
+      <stop offset="55%" stop-color="#f4f4f5" />
+      <stop offset="100%" stop-color="#e4e4e7" />
+    </linearGradient>
     <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="130%">
       <feDropShadow dx="0" dy="8" stdDeviation="15" flood-color="rgba(15,23,42,0.08)" />
     </filter>
   </defs>
-  <rect width="100%" height="100%" fill="#ffffff" rx="16" />
+  <rect width="100%" height="100%" fill="url(#chart-bg)" rx="16" />
   <rect x="${cardX}" y="${cardY}" width="${cardW}" height="${cardH}" rx="12" fill="#ffffff" filter="url(#card-shadow)" />
   <text x="${canvasW / 2}" y="${cardY + 24}" text-anchor="middle" fill="#52525b" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500">Accuracy vs. Cost</text>
   <g transform="translate(${cardX + 20}, ${cardY + 44})">
