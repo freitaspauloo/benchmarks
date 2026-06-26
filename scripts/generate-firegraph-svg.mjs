@@ -264,23 +264,25 @@ function resolveLabelPlacements(points, toX, toY) {
 function buildChart({ costScale, filename, titleSuffix, variant = "full" }) {
   const isLog = costScale === "log";
   const isHero = variant === "hero";
-  const canvasW = isHero ? 640 : 1024;
-  const canvasH = isHero ? 400 : Math.round((600 * canvasW) / 920);
+  const canvasW = isHero ? 720 : 1024;
   const k = canvasW / 920;
-  const chartW = Math.round(720 * k);
-  const chartH = Math.round((isHero ? 300 : 420) * k);
-  const margin = {
-    top: Math.round((isHero ? 16 : 22) * k),
-    right: Math.round((isHero ? 72 : 112) * k),
-    bottom: Math.round((isHero ? 36 : 46) * k),
-    left: Math.round((isHero ? 16 : 24) * k),
-  };
-  const yAxisW = 44;
+  const canvasH = isHero ? 420 : Math.round(560 * k);
+  const chartW = isHero ? canvasW - 48 : canvasW - Math.round(64 * k);
+  const chartH = isHero ? canvasH - 80 : canvasH - Math.round(96 * k);
+  const margin = isHero
+    ? { top: 10, right: 28, bottom: 30, left: 6 }
+    : {
+        top: Math.round(18 * k),
+        right: Math.round(36 * k),
+        bottom: Math.round(40 * k),
+        left: Math.round(12 * k),
+      };
+  const yAxisW = isHero ? 38 : 44;
   const plotX = margin.left + yAxisW;
   const plotY = margin.top;
-  const plotW = chartW - margin.left - margin.right - yAxisW + Math.round(44 * k);
+  const plotW = chartW - margin.left - margin.right - yAxisW;
   const plotH = chartH - margin.top - margin.bottom;
-  const labelSurface = isHero ? "#f4f4f5" : SURFACE;
+  const labelSurface = "#f4f4f5";
 
   const xMin = isLog ? logCost(0.001) : 0;
   const xMax = isLog ? logCost(0.56) : 0.52;
@@ -348,9 +350,9 @@ function buildChart({ costScale, filename, titleSuffix, variant = "full" }) {
     </g>`;
 
   const legendVendors = ["aligned", "openai", "xai", "google", "anthropic"];
-  const legendItemW = Math.round((isHero ? 118 : 145) * k);
+  const legendItemW = Math.round((isHero ? 112 : 145) * k);
   const legendStartX = (canvasW - legendVendors.length * legendItemW) / 2;
-  const legendY = isHero ? canvasH - 18 : Math.round(548 * k);
+  const legendY = canvasH - (isHero ? 16 : 20);
   const legendFontSize = isHero ? 10 : 13;
   const legendDotR = isHero ? 4 : 6;
 
@@ -365,31 +367,22 @@ function buildChart({ costScale, filename, titleSuffix, variant = "full" }) {
     })
     .join("");
 
-  const chartOffsetX = isHero ? 8 : Math.round(32 * k) + Math.round(20 * k);
-  const chartOffsetY = isHero ? 28 : Math.round(32 * k) + Math.round(44 * k);
-  const titleY = isHero ? 18 : Math.round(32 * k) + 24;
+  const innerContentW = plotX + plotW + Math.round((isHero ? 16 : 24) * k);
+  const chartOffsetX = Math.max(isHero ? 12 : Math.round(24 * k), Math.round((canvasW - innerContentW) / 2));
+  const chartOffsetY = isHero ? 30 : 38;
+  const titleY = isHero ? 20 : 26;
+  const gradId = isHero ? "chart-bg-hero" : "chart-bg";
 
-  const shell = isHero
-    ? `<rect width="100%" height="100%" fill="#f4f4f5"/>
-  <text x="${canvasW / 2}" y="${titleY}" text-anchor="middle" fill="#52525b" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="500">Accuracy vs. Cost</text>
-  <g transform="translate(${chartOffsetX}, ${chartOffsetY})">
-    ${chartInner}
-  </g>
-  ${legend}`
-    : `<defs>
-    <linearGradient id="chart-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+  const shell = `<defs>
+    <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#fafafa" />
       <stop offset="55%" stop-color="#f4f4f5" />
       <stop offset="100%" stop-color="#e4e4e7" />
     </linearGradient>
-    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="8" stdDeviation="15" flood-color="rgba(15,23,42,0.08)" />
-    </filter>
   </defs>
-  <rect width="100%" height="100%" fill="url(#chart-bg)" rx="16" />
-  <rect x="${Math.round(32 * k)}" y="${Math.round(32 * k)}" width="${canvasW - Math.round(32 * k) * 2}" height="${Math.round(480 * k)}" rx="12" fill="#ffffff" filter="url(#card-shadow)" />
-  <text x="${canvasW / 2}" y="${Math.round(32 * k) + 24}" text-anchor="middle" fill="#52525b" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500">Accuracy vs. Cost</text>
-  <g transform="translate(${Math.round(32 * k) + Math.round(20 * k)}, ${Math.round(32 * k) + Math.round(44 * k)})">
+  <rect width="100%" height="100%" fill="url(#${gradId})" rx="${isHero ? 12 : 0}" />
+  <text x="${canvasW / 2}" y="${titleY}" text-anchor="middle" fill="#52525b" font-family="Inter, system-ui, sans-serif" font-size="${isHero ? 13 : 14}" font-weight="500">Accuracy vs. Cost</text>
+  <g transform="translate(${chartOffsetX}, ${chartOffsetY})">
     ${chartInner}
   </g>
   ${legend}`;

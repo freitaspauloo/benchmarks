@@ -167,6 +167,7 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 }
 
 .benchmarks-feature-panel {
+  align-items: stretch;
   background: #fafafa;
   border: 1px solid #e4e4e7;
   border-radius: 1rem;
@@ -252,17 +253,19 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 }
 
 .benchmarks-feature-preview {
-  background: #f4f4f5;
+  background: linear-gradient(145deg, #fafafa 0%, #f4f4f5 55%, #ececee 100%);
   border: none;
   border-radius: 0.75rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 0;
   overflow: hidden;
   padding: 0;
 }
 
 .benchmarks-feature-preview-chart {
-  background-color: #f4f4f5;
+  background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -271,8 +274,11 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 }
 
 .benchmarks-feature-preview-chart--scatter {
-  aspect-ratio: 640 / 400;
+  align-self: center;
+  aspect-ratio: 720 / 420;
   background-image: url("/images/general-accuracy-vs-cost-log-hero.svg");
+  min-height: 280px;
+  width: 100%;
 }
 
 .benchmarks-feature-preview-chart--cefeai {
@@ -396,8 +402,9 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 }
 
 .benchmarks-chart-frame--scatter {
-  aspect-ratio: 1024 / 668;
-  background: #f4f4f5 url("/images/general-accuracy-vs-cost-log.svg") center / 100% 100% no-repeat;
+  aspect-ratio: 1024 / 623;
+  background: linear-gradient(145deg, #fafafa 0%, #f4f4f5 55%, #ececee 100%) center / cover no-repeat,
+    url("/images/general-accuracy-vs-cost-log.svg") center / 100% 100% no-repeat;
 }
 
 .benchmarks-chart-frame--cefeai-religious {
