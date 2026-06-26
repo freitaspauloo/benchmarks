@@ -337,6 +337,13 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
   padding: 0 !important;
 }
 
-.benchmarks-page-shell [data-name="frame"] > div:first-child {
+.benchmarks-page-shell [data-name="frame"] > div:first-child,
+.benchmarks-page-shell [data-name="frame"] > div.text-center {
   display: none !important;
+}
+
+.benchmarks-page-shell [data-name="frame"] img {
+  display: block;
+  height: auto;
+  width: 100%;
 }

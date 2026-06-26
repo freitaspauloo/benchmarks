@@ -95,6 +95,25 @@ function escapeXml(value) {
     .replaceAll('"', "&quot;");
 }
 
+function wrapText(text, maxChars) {
+  const words = text.split(" ");
+  const lines = [];
+  let line = "";
+
+  for (const word of words) {
+    const next = line ? `${line} ${word}` : word;
+    if (next.length > maxChars && line) {
+      lines.push(line);
+      line = word;
+    } else {
+      line = next;
+    }
+  }
+
+  if (line) lines.push(line);
+  return lines;
+}
+
 function horizontalBarChart({
   rows,
   valueKey,
@@ -111,49 +130,54 @@ function horizontalBarChart({
 
   const width = 720;
   const rowH = 36;
-  const cardPad = 20;
-  const titleBlock = 28;
-  const footnoteBlock = footnote ? 24 : 0;
-  const margin = {
-    top: cardPad + titleBlock + 8,
-    right: 48,
-    bottom: 36 + footnoteBlock,
-    left: 148,
-  };
-  const height = margin.top + margin.bottom + sorted.length * rowH;
-  const plotW = width - margin.left - margin.right;
+  const cardPad = 24;
+  const left = 148;
+  const right = 48;
+  const plotW = width - left - right;
+  const plotTop = cardPad + 44;
+  const plotBottom = plotTop + sorted.length * rowH - 8;
+  const tickY = plotBottom + 20;
+  const xLabelY = tickY + 26;
+  const footnoteLines = footnote ? wrapText(footnote, 78) : [];
+  const footnoteStartY = xLabelY + 28;
+  const height = footnote
+    ? footnoteStartY + footnoteLines.length * 16 + cardPad
+    : xLabelY + cardPad + 12;
 
   const bars = sorted
     .map((row, i) => {
-      const y = margin.top + i * rowH + 8;
+      const y = plotTop + i * rowH + 8;
       const barW = (row[valueKey] / maxValue) * plotW;
       const fill = row.vendor === "aligned" ? ALIGNED : OTHER;
-      return `<rect x="${margin.left}" y="${y}" width="${barW.toFixed(1)}" height="20" rx="3" fill="${fill}" fill-opacity="${row.vendor === "aligned" ? 1 : 0.85}"/>
-<text x="${margin.left - 8}" y="${y + 14}" text-anchor="end" font-size="11" fill="${INK}">${escapeXml(row.model)}</text>
-<text x="${(margin.left + barW + 6).toFixed(1)}" y="${y + 14}" font-size="10" fill="${MUTED}">${row[valueKey]}%</text>`;
+      return `<rect x="${left}" y="${y}" width="${barW.toFixed(1)}" height="20" rx="3" fill="${fill}" fill-opacity="${row.vendor === "aligned" ? 1 : 0.85}"/>
+<text x="${left - 8}" y="${y + 14}" text-anchor="end" font-size="11" fill="${INK}">${escapeXml(row.model)}</text>
+<text x="${(left + barW + 6).toFixed(1)}" y="${y + 14}" font-size="10" fill="${MUTED}">${row[valueKey]}%</text>`;
     })
     .join("\n");
 
   const ticks = [0, 25, 50, 75, 100].filter((t) => t <= maxValue);
   const grid = ticks
     .map((t) => {
-      const x = margin.left + (t / maxValue) * plotW;
-      return `<line x1="${x.toFixed(1)}" y1="${margin.top - 4}" x2="${x.toFixed(1)}" y2="${height - margin.bottom}" stroke="${GRID}" stroke-dasharray="4 4"/>
-<text x="${x.toFixed(1)}" y="${height - margin.bottom + 16}" text-anchor="middle" font-size="10" fill="${MUTED}">${t}%</text>`;
+      const x = left + (t / maxValue) * plotW;
+      return `<line x1="${x.toFixed(1)}" y1="${plotTop - 4}" x2="${x.toFixed(1)}" y2="${plotBottom}" stroke="${GRID}" stroke-dasharray="4 4"/>
+<text x="${x.toFixed(1)}" y="${tickY}" text-anchor="middle" font-size="10" fill="${MUTED}">${t}%</text>`;
     })
     .join("\n");
 
-  const footnoteEl = footnote
-    ? `<text x="${(width / 2).toFixed(1)}" y="${height - 8}" text-anchor="middle" font-size="10" fill="${MUTED}">${escapeXml(footnote)}</text>`
-    : "";
+  const footnoteEl = footnoteLines
+    .map(
+      (line, index) =>
+        `<text x="${(width / 2).toFixed(1)}" y="${footnoteStartY + index * 16}" text-anchor="middle" font-size="10" fill="${MUTED}">${escapeXml(line)}</text>`,
+    )
+    .join("\n");
 
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-label="${escapeXml(title)}">
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${escapeXml(title)}">
 <style>text{font-family:Inter,system-ui,sans-serif}</style>
 <rect width="100%" height="100%" fill="#f4f4f5" rx="12"/>
-<text x="${(width / 2).toFixed(1)}" y="${cardPad + 14}" text-anchor="middle" font-size="13" font-weight="600" fill="${INK}">${escapeXml(title)}</text>
+<text x="${(width / 2).toFixed(1)}" y="${cardPad + 16}" text-anchor="middle" font-size="13" font-weight="600" fill="${INK}">${escapeXml(title)}</text>
 ${grid}
 ${bars}
-<text x="${(width / 2).toFixed(1)}" y="${height - margin.bottom + 30}" text-anchor="middle" font-size="11" fill="${MUTED}">${escapeXml(xLabel)}</text>
+<text x="${(width / 2).toFixed(1)}" y="${xLabelY}" text-anchor="middle" font-size="11" fill="${MUTED}">${escapeXml(xLabel)}</text>
 ${footnoteEl}
 </svg>`;
 
