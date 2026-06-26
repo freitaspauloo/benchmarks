@@ -1,32 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 426" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Total conversion bias (lower is better)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 599" width="1024" height="599" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Total conversion bias (lower is better)">
 <style>text{font-family:Inter,system-ui,sans-serif}</style>
-<rect width="100%" height="100%" fill="#f4f4f5" rx="12"/>
-<text x="360.0" y="40" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Total conversion bias (lower is better)</text>
-<line x1="148.0" y1="64" x2="148.0" y2="312" stroke="#e2e8f0" stroke-dasharray="4 4"/>
-<text x="148.0" y="332" text-anchor="middle" font-size="10" fill="#64748b">0%</text>
-<line x1="439.1" y1="64" x2="439.1" y2="312" stroke="#e2e8f0" stroke-dasharray="4 4"/>
-<text x="439.1" y="332" text-anchor="middle" font-size="10" fill="#64748b">25%</text>
-<rect x="148" y="76" width="104.8" height="20" rx="3" fill="#18181b" fill-opacity="1"/>
-<text x="140" y="90" text-anchor="end" font-size="11" fill="#0f172a">Aligned AI</text>
-<text x="258.8" y="90" font-size="10" fill="#64748b">9%</text>
-<rect x="148" y="112" width="314.4" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
-<text x="140" y="126" text-anchor="end" font-size="11" fill="#0f172a">Llama 4 Maverick</text>
-<text x="468.4" y="126" font-size="10" fill="#64748b">27%</text>
-<rect x="148" y="148" width="337.7" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
-<text x="140" y="162" text-anchor="end" font-size="11" fill="#0f172a">Claude 3.5 Sonnet</text>
-<text x="491.7" y="162" font-size="10" fill="#64748b">29%</text>
-<rect x="148" y="184" width="361.0" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
-<text x="140" y="198" text-anchor="end" font-size="11" fill="#0f172a">Gemini 2.5 Pro</text>
-<text x="515.0" y="198" font-size="10" fill="#64748b">31%</text>
-<rect x="148" y="220" width="384.3" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
-<text x="140" y="234" text-anchor="end" font-size="11" fill="#0f172a">Mistral Large</text>
-<text x="538.3" y="234" font-size="10" fill="#64748b">33%</text>
-<rect x="148" y="256" width="395.9" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
-<text x="140" y="270" text-anchor="end" font-size="11" fill="#0f172a">GPT-4o</text>
-<text x="549.9" y="270" font-size="10" fill="#64748b">34%</text>
-<rect x="148" y="292" width="442.5" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
-<text x="140" y="306" text-anchor="end" font-size="11" fill="#0f172a">Grok 3</text>
-<text x="596.5" y="306" font-size="10" fill="#64748b">38%</text>
-<text x="360.0" y="358" text-anchor="middle" font-size="11" fill="#64748b">Bias as % of worst-case</text>
-<text x="360.0" y="386" text-anchor="middle" font-size="10" fill="#64748b">Total conversion bias as a percentage of worst-case — lower is better.</text>
+<rect width="100%" height="100%" fill="#f4f4f5"/>
+<text x="512.0" y="50.13333333333333" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Total conversion bias (lower is better)</text>
+<line x1="210.5" y1="92.71111111111111" x2="210.5" y2="443.73333333333335" stroke="#e2e8f0" stroke-dasharray="4 4"/>
+<text x="210.5" y="472.1777777777778" text-anchor="middle" font-size="10" fill="#64748b">0%</text>
+<line x1="624.5" y1="92.71111111111111" x2="624.5" y2="443.73333333333335" stroke="#e2e8f0" stroke-dasharray="4 4"/>
+<text x="624.5" y="472.1777777777778" text-anchor="middle" font-size="10" fill="#64748b">25%</text>
+<rect x="210.4888888888889" y="104.71111111111111" width="149.0" height="20" rx="3" fill="#18181b" fill-opacity="1"/>
+<text x="202.4888888888889" y="118.71111111111111" text-anchor="end" font-size="11" fill="#0f172a">Aligned AI</text>
+<text x="365.5" y="118.71111111111111" font-size="10" fill="#64748b">9%</text>
+<rect x="210.4888888888889" y="155.9111111111111" width="447.1" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<text x="202.4888888888889" y="169.9111111111111" text-anchor="end" font-size="11" fill="#0f172a">Llama 4 Maverick</text>
+<text x="663.6" y="169.9111111111111" font-size="10" fill="#64748b">27%</text>
+<rect x="210.4888888888889" y="207.11111111111111" width="480.3" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<text x="202.4888888888889" y="221.11111111111111" text-anchor="end" font-size="11" fill="#0f172a">Claude 3.5 Sonnet</text>
+<text x="696.8" y="221.11111111111111" font-size="10" fill="#64748b">29%</text>
+<rect x="210.4888888888889" y="258.31111111111113" width="513.4" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<text x="202.4888888888889" y="272.31111111111113" text-anchor="end" font-size="11" fill="#0f172a">Gemini 2.5 Pro</text>
+<text x="729.9" y="272.31111111111113" font-size="10" fill="#64748b">31%</text>
+<rect x="210.4888888888889" y="309.5111111111111" width="546.5" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<text x="202.4888888888889" y="323.5111111111111" text-anchor="end" font-size="11" fill="#0f172a">Mistral Large</text>
+<text x="763.0" y="323.5111111111111" font-size="10" fill="#64748b">33%</text>
+<rect x="210.4888888888889" y="360.7111111111111" width="563.1" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<text x="202.4888888888889" y="374.7111111111111" text-anchor="end" font-size="11" fill="#0f172a">GPT-4o</text>
+<text x="779.6" y="374.7111111111111" font-size="10" fill="#64748b">34%</text>
+<rect x="210.4888888888889" y="411.91111111111115" width="629.3" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<text x="202.4888888888889" y="425.91111111111115" text-anchor="end" font-size="11" fill="#0f172a">Grok 3</text>
+<text x="845.8" y="425.91111111111115" font-size="10" fill="#64748b">38%</text>
+<text x="512.0" y="509.15555555555557" text-anchor="middle" font-size="11" fill="#64748b">Bias as % of worst-case</text>
+<text x="512.0" y="548.9777777777778" text-anchor="middle" font-size="10" fill="#64748b">Total conversion bias as a percentage of worst-case — lower is better.</text>
 </svg>

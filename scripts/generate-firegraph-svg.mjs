@@ -261,16 +261,26 @@ function resolveLabelPlacements(points, toX, toY) {
   return points;
 }
 
-function buildChart({ costScale, filename, titleSuffix }) {
+function buildChart({ costScale, filename, titleSuffix, variant = "full" }) {
   const isLog = costScale === "log";
-  const chartW = 720;
-  const chartH = 420;
-  const margin = { top: 22, right: 112, bottom: 46, left: 24 };
+  const isHero = variant === "hero";
+  const canvasW = isHero ? 640 : 1024;
+  const canvasH = isHero ? 400 : Math.round((600 * canvasW) / 920);
+  const k = canvasW / 920;
+  const chartW = Math.round(720 * k);
+  const chartH = Math.round((isHero ? 300 : 420) * k);
+  const margin = {
+    top: Math.round((isHero ? 16 : 22) * k),
+    right: Math.round((isHero ? 72 : 112) * k),
+    bottom: Math.round((isHero ? 36 : 46) * k),
+    left: Math.round((isHero ? 16 : 24) * k),
+  };
   const yAxisW = 44;
   const plotX = margin.left + yAxisW;
   const plotY = margin.top;
-  const plotW = chartW - margin.left - margin.right - yAxisW + 44;
+  const plotW = chartW - margin.left - margin.right - yAxisW + Math.round(44 * k);
   const plotH = chartH - margin.top - margin.bottom;
+  const labelSurface = isHero ? "#f4f4f5" : SURFACE;
 
   const xMin = isLog ? logCost(0.001) : 0;
   const xMax = isLog ? logCost(0.56) : 0.52;
@@ -321,7 +331,7 @@ function buildChart({ costScale, filename, titleSuffix }) {
     const ly = cy + (p.labelDy ?? 4);
     return `
       <circle cx="${cx}" cy="${cy}" r="5" fill="${color}" stroke="${color}" stroke-width="1.5" />
-      <text x="${lx}" y="${ly}" fill="${INK}" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="${anchor}" dominant-baseline="middle" paint-order="stroke" stroke="${SURFACE}" stroke-width="3" stroke-linejoin="round">${escapeXml(p.label)}</text>`;
+      <text x="${lx}" y="${ly}" fill="${INK}" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="${anchor}" dominant-baseline="middle" paint-order="stroke" stroke="${labelSurface}" stroke-width="3" stroke-linejoin="round">${escapeXml(p.label)}</text>`;
   }).join("\n");
 
   const xAxisLabel = `Cost — Avg. cost per chat (${isLog ? "log scale" : "actual scale"})`;
@@ -338,30 +348,35 @@ function buildChart({ costScale, filename, titleSuffix }) {
     </g>`;
 
   const legendVendors = ["aligned", "openai", "xai", "google", "anthropic"];
-  const legendItemW = 145;
-  const canvasW = 920;
+  const legendItemW = Math.round((isHero ? 118 : 145) * k);
   const legendStartX = (canvasW - legendVendors.length * legendItemW) / 2;
-  const legendY = 548;
+  const legendY = isHero ? canvasH - 18 : Math.round(548 * k);
+  const legendFontSize = isHero ? 10 : 13;
+  const legendDotR = isHero ? 4 : 6;
 
   const legend = legendVendors
     .map((vendor, i) => {
       const x = legendStartX + i * legendItemW;
       return `
         <g transform="translate(${x}, ${legendY})">
-          <circle cx="0" cy="0" r="6" fill="${VENDOR_COLORS[vendor]}" />
-          <text x="14" y="4" fill="#646464" font-family="Inter, system-ui, sans-serif" font-size="13">${escapeXml(VENDOR_LABELS[vendor])}</text>
+          <circle cx="0" cy="0" r="${legendDotR}" fill="${VENDOR_COLORS[vendor]}" />
+          <text x="12" y="3" fill="#646464" font-family="Inter, system-ui, sans-serif" font-size="${legendFontSize}">${escapeXml(VENDOR_LABELS[vendor])}</text>
         </g>`;
     })
     .join("");
 
-  const cardX = 32;
-  const cardY = 32;
-  const cardW = canvasW - 64;
-  const cardH = 480;
+  const chartOffsetX = isHero ? 8 : Math.round(32 * k) + Math.round(20 * k);
+  const chartOffsetY = isHero ? 28 : Math.round(32 * k) + Math.round(44 * k);
+  const titleY = isHero ? 18 : Math.round(32 * k) + 24;
 
-  const svg = `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${canvasW} 600" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Accuracy vs cost scatter plot${titleSuffix ? `, ${titleSuffix}` : ""}">
-  <defs>
+  const shell = isHero
+    ? `<rect width="100%" height="100%" fill="#f4f4f5"/>
+  <text x="${canvasW / 2}" y="${titleY}" text-anchor="middle" fill="#52525b" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="500">Accuracy vs. Cost</text>
+  <g transform="translate(${chartOffsetX}, ${chartOffsetY})">
+    ${chartInner}
+  </g>
+  ${legend}`
+    : `<defs>
     <linearGradient id="chart-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#fafafa" />
       <stop offset="55%" stop-color="#f4f4f5" />
@@ -372,15 +387,19 @@ function buildChart({ costScale, filename, titleSuffix }) {
     </filter>
   </defs>
   <rect width="100%" height="100%" fill="url(#chart-bg)" rx="16" />
-  <rect x="${cardX}" y="${cardY}" width="${cardW}" height="${cardH}" rx="12" fill="#ffffff" filter="url(#card-shadow)" />
-  <text x="${canvasW / 2}" y="${cardY + 24}" text-anchor="middle" fill="#52525b" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500">Accuracy vs. Cost</text>
-  <g transform="translate(${cardX + 20}, ${cardY + 44})">
+  <rect x="${Math.round(32 * k)}" y="${Math.round(32 * k)}" width="${canvasW - Math.round(32 * k) * 2}" height="${Math.round(480 * k)}" rx="12" fill="#ffffff" filter="url(#card-shadow)" />
+  <text x="${canvasW / 2}" y="${Math.round(32 * k) + 24}" text-anchor="middle" fill="#52525b" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500">Accuracy vs. Cost</text>
+  <g transform="translate(${Math.round(32 * k) + Math.round(20 * k)}, ${Math.round(32 * k) + Math.round(44 * k)})">
     ${chartInner}
   </g>
-  ${legend}
+  ${legend}`;
+
+  const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${canvasW} ${canvasH}" width="${canvasW}" height="${canvasH}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Accuracy vs cost scatter plot${titleSuffix ? `, ${titleSuffix}` : ""}">
+  ${shell}
 </svg>`;
 
-  return { svg, filename };
+  return { svg, filename, width: canvasW, height: canvasH };
 }
 
 mkdirSync(OUT_DIR, { recursive: true });
@@ -395,3 +414,12 @@ for (const scale of ["log", "actual"]) {
   writeFileSync(outPath, svg, "utf8");
   console.log(`Wrote ${outPath}`);
 }
+
+const heroChart = buildChart({
+  costScale: "log",
+  variant: "hero",
+  filename: "general-accuracy-vs-cost-log-hero.svg",
+  titleSuffix: "log scale",
+});
+writeFileSync(join(OUT_DIR, heroChart.filename), heroChart.svg, "utf8");
+console.log(`Wrote ${join(OUT_DIR, heroChart.filename)}`);

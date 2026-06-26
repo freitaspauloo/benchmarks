@@ -247,29 +247,61 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 }
 
 .benchmarks-feature-preview {
-  align-items: center;
-  background: linear-gradient(145deg, #fafafa 0%, #f4f4f5 55%, #ececee 100%);
-  border: 1px solid #e4e4e7;
-  border-radius: 0.875rem;
-  display: flex;
-  justify-content: center;
-  min-height: 16rem;
+  background: #f4f4f5;
+  border: none;
+  border-radius: 0.75rem;
+  display: block;
+  min-height: 0;
   overflow: hidden;
-  padding: 1rem;
+  padding: 0;
 }
 
-.benchmarks-feature-preview img {
-  border-radius: 0.625rem;
-  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.12);
-  max-height: 18rem;
-  object-fit: contain;
+.benchmarks-feature-preview-chart {
+  background-color: #f4f4f5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: block;
   width: 100%;
+}
+
+.benchmarks-feature-preview-chart--scatter {
+  aspect-ratio: 640 / 400;
+  background-image: url("/images/general-accuracy-vs-cost-log-hero.svg");
+}
+
+.benchmarks-feature-preview-chart--cefeai {
+  aspect-ratio: 640 / 329;
+  background-image: url("/images/cefeai-religious-representation-meaningful-hero.svg");
+}
+
+.benchmarks-feature-preview img,
+.benchmarks-feature-preview object {
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+  height: auto;
+  max-height: none;
+  object-fit: unset !important;
+  width: 100%;
+}
+
+.benchmarks-feature-preview img.object-contain {
+  object-fit: unset !important;
+}
+
+.benchmarks-feature-preview picture,
+.benchmarks-feature-preview span.contents {
+  display: block !important;
+  width: 100% !important;
 }
 
 .benchmarks-feature-preview-cards,
 .benchmarks-feature-preview-roadmap {
+  display: flex;
   flex-direction: column;
   gap: 0.875rem;
+  padding: 1rem;
 }
 
 .benchmarks-preview-card {
@@ -339,11 +371,46 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
   width: 100%;
 }
 
-.benchmarks-chart-frame img {
-  display: block;
-  height: auto;
+.benchmarks-chart-frame img,
+.benchmarks-chart-frame picture {
+  display: block !important;
+  height: auto !important;
   max-width: 100%;
-  object-fit: initial;
+  width: 100% !important;
+}
+
+.benchmarks-chart-frame img.object-contain {
+  object-fit: unset !important;
+  object-position: initial !important;
+}
+
+.benchmarks-chart-frame > span,
+.benchmarks-chart-frame span.contents {
+  display: block !important;
+  width: 100% !important;
+}
+
+.benchmarks-chart-frame--scatter {
+  aspect-ratio: 1024 / 668;
+  background: #f4f4f5 url("/images/general-accuracy-vs-cost-log.svg") center / 100% 100% no-repeat;
+}
+
+.benchmarks-chart-frame--cefeai-religious {
+  aspect-ratio: 1024 / 615;
+  background: #f4f4f5 url("/images/cefeai-religious-representation-meaningful.svg") center / 100% 100% no-repeat;
+}
+
+.benchmarks-chart-frame--cefeai-bias {
+  aspect-ratio: 1024 / 599;
+  background: #f4f4f5 url("/images/cefeai-conversion-bias-total.svg") center / 100% 100% no-repeat;
+}
+
+.benchmarks-chart-frame--embed {
+  background-color: #f4f4f5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  line-height: 0;
   width: 100%;
 }
 

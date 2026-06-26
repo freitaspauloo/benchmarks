@@ -45,23 +45,40 @@
       {
         "group": "Research",
         "public": true,
-        "pages": ["index"]
+        "pages": [
+          "index",
+          {
+            "group": "General benchmark",
+            "expanded": true,
+            "pages": [
+              "general",
+              "general/all-models",
+              "general/pricing-inputs",
+              "general/methodology"
+            ]
+          },
+          {
+            "group": "CEFeAI benchmark",
+            "expanded": true,
+            "pages": [
+              "cefeai",
+              "cefeai/religious-representation",
+              "cefeai/conversion-bias",
+              "cefeai/bias-by-faith"
+            ]
+          },
+          {
+            "group": "Model",
+            "expanded": true,
+            "pages": ["model", "model/what-we-measure"]
+          },
+          {
+            "group": "Roadmap",
+            "expanded": true,
+            "pages": ["roadmap", "roadmap/published", "roadmap/next"]
+          }
+        ]
       }
     ]
-  },
-  "redirects": [
-    { "source": "/general", "destination": "/#general-benchmark" },
-    { "source": "/general/all-models", "destination": "/#all-models-by-accuracy" },
-    { "source": "/general/pricing-inputs", "destination": "/#pricing-inputs-public-api-rates" },
-    { "source": "/general/methodology", "destination": "/#methodology" },
-    { "source": "/cefeai", "destination": "/#cefeai-benchmark" },
-    { "source": "/cefeai/religious-representation", "destination": "/#religious-representation" },
-    { "source": "/cefeai/conversion-bias", "destination": "/#conversion-bias" },
-    { "source": "/cefeai/bias-by-faith", "destination": "/#bias-by-model-and-faith" },
-    { "source": "/model", "destination": "/#model" },
-    { "source": "/model/what-we-measure", "destination": "/#what-the-benchmarks-measure" },
-    { "source": "/roadmap", "destination": "/#roadmap" },
-    { "source": "/roadmap/published", "destination": "/#published" },
-    { "source": "/roadmap/next", "destination": "/#next" }
-  ]
+  }
 }

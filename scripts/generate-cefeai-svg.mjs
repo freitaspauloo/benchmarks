@@ -114,6 +114,10 @@ function wrapText(text, maxChars) {
   return lines;
 }
 
+const CANVAS_W = 1024;
+const HERO_W = 640;
+const REF_W = 720;
+
 function horizontalBarChart({
   rows,
   valueKey,
@@ -123,26 +127,31 @@ function horizontalBarChart({
   xLabel,
   footnote,
   filename,
+  hero = false,
 }) {
   const sorted = [...rows].sort((a, b) =>
     invertBetter ? a[valueKey] - b[valueKey] : b[valueKey] - a[valueKey],
   );
 
-  const width = 720;
-  const rowH = 36;
-  const cardPad = 24;
-  const left = 148;
-  const right = 48;
+  const width = hero ? HERO_W : CANVAS_W;
+  const scale = width / REF_W;
+  const s = (n) => (n * scale);
+  const rowH = s(36);
+  const cardPad = s(hero ? 16 : 24);
+  const left = s(148);
+  const right = s(48);
   const plotW = width - left - right;
-  const plotTop = cardPad + 44;
-  const plotBottom = plotTop + sorted.length * rowH - 8;
-  const tickY = plotBottom + 20;
-  const xLabelY = tickY + 26;
-  const footnoteLines = footnote ? wrapText(footnote, 78) : [];
-  const footnoteStartY = xLabelY + 28;
-  const height = footnote
-    ? footnoteStartY + footnoteLines.length * 16 + cardPad
-    : xLabelY + cardPad + 12;
+  const plotTop = cardPad + s(hero ? 36 : 44);
+  const plotBottom = plotTop + sorted.length * rowH - s(8);
+  const tickY = plotBottom + s(20);
+  const xLabelY = tickY + s(26);
+  const footnoteLines = footnote ? wrapText(footnote, hero ? 72 : 98) : [];
+  const footnoteStartY = xLabelY + s(28);
+  const height = Math.round(
+    footnote
+      ? footnoteStartY + footnoteLines.length * 16 + cardPad
+      : xLabelY + cardPad + s(12),
+  );
 
   const bars = sorted
     .map((row, i) => {
@@ -171,9 +180,9 @@ function horizontalBarChart({
     )
     .join("\n");
 
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${escapeXml(title)}">
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${escapeXml(title)}">
 <style>text{font-family:Inter,system-ui,sans-serif}</style>
-<rect width="100%" height="100%" fill="#f4f4f5" rx="12"/>
+<rect width="100%" height="100%" fill="#f4f4f5"/>
 <text x="${(width / 2).toFixed(1)}" y="${cardPad + 16}" text-anchor="middle" font-size="13" font-weight="600" fill="${INK}">${escapeXml(title)}</text>
 ${grid}
 ${bars}
@@ -198,6 +207,18 @@ function main() {
     footnote:
       "Meaningful religious reference (score 2+) — share of prompts where models include substantive faith content.",
     filename: "cefeai-religious-representation-meaningful.svg",
+  });
+
+  horizontalBarChart({
+    rows: RELIGIOUS_REPRESENTATION_ROWS,
+    valueKey: "meaningful",
+    maxValue: 100,
+    invertBetter: false,
+    title: "Meaningful religious reference (score 2+)",
+    xLabel: "Share of 150 ethics prompts (%)",
+    footnote: null,
+    filename: "cefeai-religious-representation-meaningful-hero.svg",
+    hero: true,
   });
 
   horizontalBarChart({

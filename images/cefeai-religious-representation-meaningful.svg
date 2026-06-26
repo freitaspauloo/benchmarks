@@ -1,39 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 442" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Meaningful religious reference (score 2+)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 615" width="1024" height="615" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Meaningful religious reference (score 2+)">
 <style>text{font-family:Inter,system-ui,sans-serif}</style>
-<rect width="100%" height="100%" fill="#f4f4f5" rx="12"/>
-<text x="360.0" y="40" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Meaningful religious reference (score 2+)</text>
-<line x1="148.0" y1="64" x2="148.0" y2="312" stroke="#e2e8f0" stroke-dasharray="4 4"/>
-<text x="148.0" y="332" text-anchor="middle" font-size="10" fill="#64748b">0%</text>
-<line x1="279.0" y1="64" x2="279.0" y2="312" stroke="#e2e8f0" stroke-dasharray="4 4"/>
-<text x="279.0" y="332" text-anchor="middle" font-size="10" fill="#64748b">25%</text>
-<line x1="410.0" y1="64" x2="410.0" y2="312" stroke="#e2e8f0" stroke-dasharray="4 4"/>
-<text x="410.0" y="332" text-anchor="middle" font-size="10" fill="#64748b">50%</text>
-<line x1="541.0" y1="64" x2="541.0" y2="312" stroke="#e2e8f0" stroke-dasharray="4 4"/>
-<text x="541.0" y="332" text-anchor="middle" font-size="10" fill="#64748b">75%</text>
-<line x1="672.0" y1="64" x2="672.0" y2="312" stroke="#e2e8f0" stroke-dasharray="4 4"/>
-<text x="672.0" y="332" text-anchor="middle" font-size="10" fill="#64748b">100%</text>
-<rect x="148" y="76" width="319.6" height="20" rx="3" fill="#18181b" fill-opacity="1"/>
-<text x="140" y="90" text-anchor="end" font-size="11" fill="#0f172a">Aligned AI</text>
-<text x="473.6" y="90" font-size="10" fill="#64748b">61%</text>
-<rect x="148" y="112" width="94.3" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
-<text x="140" y="126" text-anchor="end" font-size="11" fill="#0f172a">Llama 4 Maverick</text>
-<text x="248.3" y="126" font-size="10" fill="#64748b">18%</text>
-<rect x="148" y="148" width="78.6" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
-<text x="140" y="162" text-anchor="end" font-size="11" fill="#0f172a">Gemini 2.5 Pro</text>
-<text x="232.6" y="162" font-size="10" fill="#64748b">15%</text>
-<rect x="148" y="184" width="73.4" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
-<text x="140" y="198" text-anchor="end" font-size="11" fill="#0f172a">GPT-4o</text>
-<text x="227.4" y="198" font-size="10" fill="#64748b">14%</text>
-<rect x="148" y="220" width="68.1" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
-<text x="140" y="234" text-anchor="end" font-size="11" fill="#0f172a">Mistral Large</text>
-<text x="222.1" y="234" font-size="10" fill="#64748b">13%</text>
-<rect x="148" y="256" width="62.9" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
-<text x="140" y="270" text-anchor="end" font-size="11" fill="#0f172a">Grok 3</text>
-<text x="216.9" y="270" font-size="10" fill="#64748b">12%</text>
-<rect x="148" y="292" width="57.6" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
-<text x="140" y="306" text-anchor="end" font-size="11" fill="#0f172a">Claude 3.5 Sonnet</text>
-<text x="211.6" y="306" font-size="10" fill="#64748b">11%</text>
-<text x="360.0" y="358" text-anchor="middle" font-size="11" fill="#64748b">Share of 150 ethics prompts (%)</text>
-<text x="360.0" y="386" text-anchor="middle" font-size="10" fill="#64748b">Meaningful religious reference (score 2+) — share of prompts where models</text>
-<text x="360.0" y="402" text-anchor="middle" font-size="10" fill="#64748b">include substantive faith content.</text>
+<rect width="100%" height="100%" fill="#f4f4f5"/>
+<text x="512.0" y="50.13333333333333" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Meaningful religious reference (score 2+)</text>
+<line x1="210.5" y1="92.71111111111111" x2="210.5" y2="443.73333333333335" stroke="#e2e8f0" stroke-dasharray="4 4"/>
+<text x="210.5" y="472.1777777777778" text-anchor="middle" font-size="10" fill="#64748b">0%</text>
+<line x1="396.8" y1="92.71111111111111" x2="396.8" y2="443.73333333333335" stroke="#e2e8f0" stroke-dasharray="4 4"/>
+<text x="396.8" y="472.1777777777778" text-anchor="middle" font-size="10" fill="#64748b">25%</text>
+<line x1="583.1" y1="92.71111111111111" x2="583.1" y2="443.73333333333335" stroke="#e2e8f0" stroke-dasharray="4 4"/>
+<text x="583.1" y="472.1777777777778" text-anchor="middle" font-size="10" fill="#64748b">50%</text>
+<line x1="769.4" y1="92.71111111111111" x2="769.4" y2="443.73333333333335" stroke="#e2e8f0" stroke-dasharray="4 4"/>
+<text x="769.4" y="472.1777777777778" text-anchor="middle" font-size="10" fill="#64748b">75%</text>
+<line x1="955.7" y1="92.71111111111111" x2="955.7" y2="443.73333333333335" stroke="#e2e8f0" stroke-dasharray="4 4"/>
+<text x="955.7" y="472.1777777777778" text-anchor="middle" font-size="10" fill="#64748b">100%</text>
+<rect x="210.4888888888889" y="104.71111111111111" width="454.6" height="20" rx="3" fill="#18181b" fill-opacity="1"/>
+<text x="202.4888888888889" y="118.71111111111111" text-anchor="end" font-size="11" fill="#0f172a">Aligned AI</text>
+<text x="671.1" y="118.71111111111111" font-size="10" fill="#64748b">61%</text>
+<rect x="210.4888888888889" y="155.9111111111111" width="134.1" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<text x="202.4888888888889" y="169.9111111111111" text-anchor="end" font-size="11" fill="#0f172a">Llama 4 Maverick</text>
+<text x="350.6" y="169.9111111111111" font-size="10" fill="#64748b">18%</text>
+<rect x="210.4888888888889" y="207.11111111111111" width="111.8" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<text x="202.4888888888889" y="221.11111111111111" text-anchor="end" font-size="11" fill="#0f172a">Gemini 2.5 Pro</text>
+<text x="328.3" y="221.11111111111111" font-size="10" fill="#64748b">15%</text>
+<rect x="210.4888888888889" y="258.31111111111113" width="104.3" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<text x="202.4888888888889" y="272.31111111111113" text-anchor="end" font-size="11" fill="#0f172a">GPT-4o</text>
+<text x="320.8" y="272.31111111111113" font-size="10" fill="#64748b">14%</text>
+<rect x="210.4888888888889" y="309.5111111111111" width="96.9" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<text x="202.4888888888889" y="323.5111111111111" text-anchor="end" font-size="11" fill="#0f172a">Mistral Large</text>
+<text x="313.4" y="323.5111111111111" font-size="10" fill="#64748b">13%</text>
+<rect x="210.4888888888889" y="360.7111111111111" width="89.4" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<text x="202.4888888888889" y="374.7111111111111" text-anchor="end" font-size="11" fill="#0f172a">Grok 3</text>
+<text x="305.9" y="374.7111111111111" font-size="10" fill="#64748b">12%</text>
+<rect x="210.4888888888889" y="411.91111111111115" width="82.0" height="20" rx="3" fill="#cbd5e1" fill-opacity="0.85"/>
+<text x="202.4888888888889" y="425.91111111111115" text-anchor="end" font-size="11" fill="#0f172a">Claude 3.5 Sonnet</text>
+<text x="298.5" y="425.91111111111115" font-size="10" fill="#64748b">11%</text>
+<text x="512.0" y="509.15555555555557" text-anchor="middle" font-size="11" fill="#64748b">Share of 150 ethics prompts (%)</text>
+<text x="512.0" y="548.9777777777778" text-anchor="middle" font-size="10" fill="#64748b">Meaningful religious reference (score 2+) — share of prompts where models include substantive</text>
+<text x="512.0" y="564.9777777777778" text-anchor="middle" font-size="10" fill="#64748b">faith content.</text>
 </svg>

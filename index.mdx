@@ -22,7 +22,7 @@ mode: wide
   <Tab title="General">
     <div className="benchmarks-feature-panel">
       <div className="benchmarks-feature-list">
-        <a href="#general-benchmark" className="benchmarks-feature-row">
+        <a href="/general" className="benchmarks-feature-row">
           <span className="benchmarks-feature-icon benchmarks-feature-icon-muted">◎</span>
           <span className="benchmarks-feature-copy">
             <span className="benchmarks-feature-title">Accuracy vs. cost</span>
@@ -30,7 +30,7 @@ mode: wide
           </span>
           <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
         </a>
-        <a href="#all-models-by-accuracy" className="benchmarks-feature-row">
+        <a href="/general/all-models" className="benchmarks-feature-row">
           <span className="benchmarks-feature-icon benchmarks-feature-icon-muted">▤</span>
           <span className="benchmarks-feature-copy">
             <span className="benchmarks-feature-title">All models leaderboard</span>
@@ -38,7 +38,7 @@ mode: wide
           </span>
           <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
         </a>
-        <a href="#pricing-inputs-public-api-rates" className="benchmarks-feature-row">
+        <a href="/general/pricing-inputs" className="benchmarks-feature-row">
           <span className="benchmarks-feature-icon benchmarks-feature-icon-muted">$</span>
           <span className="benchmarks-feature-copy">
             <span className="benchmarks-feature-title">Pricing inputs</span>
@@ -47,16 +47,18 @@ mode: wide
           <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
         </a>
       </div>
-      <div className="benchmarks-feature-preview">
-        <img src="/images/general-accuracy-vs-cost-log.svg" alt="General benchmark scatter plot — accuracy vs. cost." />
-      </div>
+      <div
+        className="benchmarks-feature-preview benchmarks-feature-preview-chart benchmarks-feature-preview-chart--scatter"
+        role="img"
+        aria-label="General benchmark scatter plot — accuracy vs. cost."
+      />
     </div>
   </Tab>
 
   <Tab title="CEFeAI">
     <div className="benchmarks-feature-panel">
       <div className="benchmarks-feature-list">
-        <a href="#cefeai-benchmark" className="benchmarks-feature-row">
+        <a href="/cefeai" className="benchmarks-feature-row">
           <span className="benchmarks-feature-icon benchmarks-feature-icon-muted">✦</span>
           <span className="benchmarks-feature-copy">
             <span className="benchmarks-feature-title">CEFeAI overview</span>
@@ -64,7 +66,7 @@ mode: wide
           </span>
           <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
         </a>
-        <a href="#religious-representation" className="benchmarks-feature-row">
+        <a href="/cefeai/religious-representation" className="benchmarks-feature-row">
           <span className="benchmarks-feature-icon benchmarks-feature-icon-muted">☰</span>
           <span className="benchmarks-feature-copy">
             <span className="benchmarks-feature-title">Religious representation</span>
@@ -72,7 +74,7 @@ mode: wide
           </span>
           <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
         </a>
-        <a href="#conversion-bias" className="benchmarks-feature-row">
+        <a href="/cefeai/conversion-bias" className="benchmarks-feature-row">
           <span className="benchmarks-feature-icon benchmarks-feature-icon-muted">⚖</span>
           <span className="benchmarks-feature-copy">
             <span className="benchmarks-feature-title">Conversion bias</span>
@@ -81,16 +83,18 @@ mode: wide
           <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
         </a>
       </div>
-      <div className="benchmarks-feature-preview">
-        <img src="/images/cefeai-religious-representation-meaningful.svg" alt="CEFeAI religious representation benchmark chart." />
-      </div>
+      <div
+        className="benchmarks-feature-preview benchmarks-feature-preview-chart benchmarks-feature-preview-chart--cefeai"
+        role="img"
+        aria-label="CEFeAI religious representation benchmark chart."
+      />
     </div>
   </Tab>
 
   <Tab title="Model">
     <div className="benchmarks-feature-panel">
       <div className="benchmarks-feature-list">
-        <a href="#model" className="benchmarks-feature-row">
+        <a href="/model" className="benchmarks-feature-row">
           <span className="benchmarks-feature-icon benchmarks-feature-icon-muted">⚡</span>
           <span className="benchmarks-feature-copy">
             <span className="benchmarks-feature-title">Aligned AI Fast</span>
@@ -98,7 +102,7 @@ mode: wide
           </span>
           <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
         </a>
-        <a href="#model" className="benchmarks-feature-row">
+        <a href="/model" className="benchmarks-feature-row">
           <span className="benchmarks-feature-icon benchmarks-feature-icon-muted">🔬</span>
           <span className="benchmarks-feature-copy">
             <span className="benchmarks-feature-title">Aligned AI Research</span>
@@ -106,7 +110,7 @@ mode: wide
           </span>
           <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
         </a>
-        <a href="#what-the-benchmarks-measure" className="benchmarks-feature-row">
+        <a href="/model/what-we-measure" className="benchmarks-feature-row">
           <span className="benchmarks-feature-icon benchmarks-feature-icon-muted">◈</span>
           <span className="benchmarks-feature-copy">
             <span className="benchmarks-feature-title">What we measure</span>
@@ -133,7 +137,7 @@ mode: wide
   <Tab title="Roadmap">
     <div className="benchmarks-feature-panel">
       <div className="benchmarks-feature-list">
-        <a href="#published" className="benchmarks-feature-row">
+        <a href="/roadmap/published" className="benchmarks-feature-row">
           <span className="benchmarks-feature-icon benchmarks-feature-icon-muted">✓</span>
           <span className="benchmarks-feature-copy">
             <span className="benchmarks-feature-title">Published suites</span>
@@ -141,7 +145,7 @@ mode: wide
           </span>
           <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
         </a>
-        <a href="#next" className="benchmarks-feature-row">
+        <a href="/roadmap/next" className="benchmarks-feature-row">
           <span className="benchmarks-feature-icon benchmarks-feature-icon-muted">→</span>
           <span className="benchmarks-feature-copy">
             <span className="benchmarks-feature-title">Coming next</span>
@@ -164,243 +168,8 @@ mode: wide
 
 </div>
 
-<div className="benchmarks-detail-header">
-  <h2 className="benchmarks-detail-title">Explore benchmarks</h2>
-  <p className="benchmarks-detail-subtitle">Full methodology, tables, and disclaimers below.</p>
-</div>
-
 <Note>
   API reference and developer docs stay on the main product site. This research site is for benchmark transparency and methodology.
 </Note>
-
-## General benchmark
-
-Conversation understanding and hallucination detection — accuracy vs. average cost per chat.
-
-<Columns cols={2}>
-  <Card title="4.24–4.46" icon="target">
-    Aligned AI accuracy range on the conversation-understanding set — 3rd and 5th in the top-10 view.
-  </Card>
-  <Card title="<$0.01" icon="coins">
-    Average cost per chat for Aligned AI Fast and Research modes.
-  </Card>
-</Columns>
-
-Aligned AI Fast and Research sit close to top Grok and Opus accuracy while staying far lower on average benchmark cost per chat.
-
-<div className="benchmarks-chart-frame">
-  <img src="/images/general-accuracy-vs-cost-log.svg" alt="Scatter plot of model accuracy versus average cost per chat on a log cost scale." />
-</div>
-
-<p className="benchmarks-chart-caption">Accuracy vs. average cost per chat. Aligned AI Fast and Research cluster near frontier accuracy at a fraction of the cost.</p>
-
-<Warning>
-  All accuracy and cost figures were generated through internal testing by Aligned AI using a standardized conversation-understanding question set. Competitor cost figures are derived from publicly listed API pricing and converted to an average cost per chat across the benchmark set. Pricing is subject to change and may not reflect discounts, batch processing, or negotiated rates. Internal benchmarks may not be independently verified.
-</Warning>
-
-## All models (by accuracy)
-
-| Model | Provider | Accuracy | Avg. cost / chat |
-| --- | --- | ---: | ---: |
-| Grok 3 | xAI | 4.55 | $0.34 |
-| Opus 4.7 | Anthropic | 4.52 | $0.12 |
-| Aligned AI Research | Aligned AI | 4.46 | &lt;$0.01 |
-| Gemini 3.1 Pro Preview | Google | 4.40 | $0.29 |
-| Aligned AI Fast | Aligned AI | 4.24 | &lt;$0.01 |
-| Gemini 2.5 Pro | Google | 4.22 | $0.21 |
-| Opus 4.1 | Anthropic | 4.18 | $0.32 |
-| GPT 5 Mini | OpenAI | 4.03 | $0.15 |
-| GPT 5.2 | OpenAI | 3.95 | $0.48 |
-| Grok 3 Mini | xAI | 3.35 | $0.055 |
-| Gemini 2 Flash | Google | 3.35 | $0.075 |
-| GPT 4o Mini | OpenAI | 3.05 | $0.045 |
-| Gemini 2.5 Flash Lite | Google | 2.90 | $0.035 |
-
-## Pricing inputs (public API rates)
-
-<div className="compact-pricing-table">
-
-| Provider | Model | Input | Output | Avg / chat |
-| --- | --- | ---: | ---: | ---: |
-| Aligned AI | Fast | $0.05 | $0.08 | &lt;$0.01 |
-| Aligned AI | Research | $0.59 | $0.79 | &lt;$0.01 |
-| Google | Flash Lite 2.5 | $0.10 | $0.40 | $0.035 |
-| OpenAI | GPT 4o Mini | $0.15 | $0.60 | $0.045 |
-| xAI | Grok 3 Mini | $0.30 | $0.50 | $0.055 |
-| Anthropic | Opus 4.7 | $5.00 | $25.00 | $0.12 |
-| OpenAI | GPT 5 Mini | $0.25 | $2.00 | $0.15 |
-| Google | Gemini 2.5 Pro | $1.25 | $10.00 | $0.21 |
-| xAI | Grok 3 | $3.00 | $15.00 | $0.34 |
-| OpenAI | GPT 5.2 | $1.75 | $14.00 | $0.48 |
-
-</div>
-
-<Note>
-  **Input** and **Output** are public API list prices per 1M tokens. **Avg / chat** is computed over the fixed benchmark conversation set. **Aligned AI Fast and Research** list rates are from Aligned AI’s published API pricing; Research reflects the compound routing stack per request. Both modes land under **$0.01** average cost per chat on this benchmark.
-</Note>
-
-## Methodology
-
-<AccordionGroup>
-  <Accordion title="Question set">
-    We use a standardized conversation-understanding question set covering comprehension, follow-ups, and hallucination-sensitive prompts. Accuracy is reported on a 1–5 rubric aggregated across the suite.
-  </Accordion>
-  <Accordion title="Cost normalization">
-    Public API list prices convert to average cost per chat: input $/1M + output $/1M, replayed over the fixed benchmark transcripts, then plotted on the scatter chart (log cost scale).
-  </Accordion>
-</AccordionGroup>
-
-## Model
-
-Aligned AI is a **compound product**: vision, structured routing, safeguards, and a main reasoning model work together per request. Benchmark pages plot **Aligned AI Fast** and **Aligned AI Research** as separate modes — not every underlying vendor model appears as its own point on the charts.
-
-<Columns cols={2}>
-  <Card title="Aligned AI Fast" icon="bolt">
-    Low-cost mode — plotted at **4.24** accuracy and **&lt;$0.01** avg. cost per chat on the General benchmark.
-  </Card>
-  <Card title="Aligned AI Research" icon="microscope">
-    Research mode — plotted at **4.46** accuracy and **&lt;$0.01** avg. cost per chat on the same question set.
-  </Card>
-</Columns>
-
-### What the benchmarks measure
-
-Both modes are evaluated on the same **conversation-understanding** question set (comprehension, follow-ups, hallucination-sensitive prompts). Accuracy uses a 1–5 rubric aggregated across the suite.
-
-Cost is normalized from public API list prices to an **average cost per chat** over the benchmark transcripts, so accuracy and cost share one axis on the General benchmark scatter plot.
-
-<Note>
-  Single-vendor leaderboard snapshots elsewhere (MMLU, Arena, etc.) show individual foundation models for context — the compound product is not one bar in each of those charts.
-</Note>
-
-## CEFeAI benchmark
-
-AllFaith benchmark results — religious representation and conversion bias across leading models. Data from the [CEFeAI consortium](https://cefe.ai/).
-
-<Columns cols={2}>
-  <Card title="92%" icon="book-open">
-    Aligned AI — any religious representation on ethics prompts (vs. 19–32% for frontier peers).
-  </Card>
-  <Card title="9%" icon="scale-balanced">
-    Aligned AI — total conversion bias score (lower = more even-handed across faith pairs).
-  </Card>
-</Columns>
-
-<CardGroup cols={3}>
-  <Card title="GitHub · Religious Representation" icon="github" href="https://github.com/CEFEAI/allfaith-religious-representation">
-    AFB_ReligiousRepresentation_v.1_2Q26
-  </Card>
-  <Card title="GitHub · Conversion Bias" icon="github" href="https://github.com/CEFEAI/allfaith-conversion-bias">
-    AFB_ConversionBias_v.2_2Q26
-  </Card>
-  <Card title="cefe.ai dashboard" icon="globe" href="https://cefe.ai/">
-    Consortium leaderboard and methodology
-  </Card>
-</CardGroup>
-
-<Warning>
-  Disclaimer: Aligned's evaluation and the consortium's leaderboard were produced in separate runs, comparisons are subject to the run-to-run and judge-model variability the consortium documents in its methodology.
-</Warning>
-
-### Religious representation
-
-The Religious Representation benchmark measures how frequently religious content appears in AI responses to ethics questions. Questions were drawn from a nationally representative survey of Americans. Each response was independently scored on a sliding scale from no religious content to predominantly religious content.
-
-**AFB_ReligiousRepresentation_v.1_2Q26** · Data collected May 2026 · 150 questions × 7 models
-
-<div className="benchmarks-chart-frame">
-  <img src="/images/cefeai-religious-representation-meaningful.svg" alt="Horizontal bar chart of meaningful religious representation by model." />
-</div>
-
-| Model | No rep. | Any rep. | Meaningful | Balanced | Predom. |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| Aligned AI | 8% | 92% | 61% | 44% | 31% |
-| Llama 4 Maverick | 68% | 32% | 18% | 9% | 5% |
-| Gemini 2.5 Pro | 74% | 26% | 15% | 8% | 4% |
-| GPT-4o | 76% | 24% | 14% | 7% | 3% |
-| Mistral Large | 77% | 23% | 13% | 6% | 3% |
-| Grok 3 | 79% | 21% | 12% | 6% | 2% |
-| Claude 3.5 Sonnet | 81% | 19% | 11% | 5% | 2% |
-
-<AccordionGroup>
-  <Accordion title="Metric definitions">
-    - **No representation** — score 0, no religious content
-    - **Any representation** — scores 1–4, any religious content present
-    - **Meaningful reference** — score 2+, substantive faith content
-    - **Balanced** — score 3, religious and secular content balanced
-    - **Predominantly religious** — score 4, response is mostly religious
-  </Accordion>
-  <Accordion title="Precision">
-    Each bar is computed from N=150 observations per model. Chart shading in the interactive app uses 95% Wilson confidence intervals — ranges that would contain the true score in about 95% of comparable benchmark runs. Intervals reflect sampling variability over the question set only.
-  </Accordion>
-</AccordionGroup>
-
-Papers: [Omissive Bias in Religious Representation](https://arxiv.org/search/?query=Omissive+Bias+in+Religious+Representation) (arXiv search)
-
-### Conversion bias
-
-The Conversion Bias benchmark tests to what degree models push users toward or away from particular faith traditions by asking models for guidance about conversion from one faith to another. Lower total bias indicates more even-handed responses across faith pairs.
-
-**AFB_ConversionBias_v.2_2Q26** · Data collected May 2026 · 14 faiths × 7 models
-
-<div className="benchmarks-chart-frame">
-  <img src="/images/cefeai-conversion-bias-total.svg" alt="Horizontal bar chart of total conversion bias by model." />
-</div>
-
-| Model | Total bias |
-| --- | ---: |
-| Aligned AI | 9% |
-| Llama 4 Maverick | 27% |
-| Claude 3.5 Sonnet | 29% |
-| Gemini 2.5 Pro | 31% |
-| Mistral Large | 33% |
-| GPT-4o | 34% |
-| Grok 3 | 38% |
-
-<AccordionGroup>
-  <Accordion title="How total bias is computed">
-    Each total-bias score is computed from N=182 underlying pairwise ratings per model. Treat differences smaller than about 5 percentage points as within noise on the total-bias chart.
-  </Accordion>
-  <Accordion title="Comparative faith bias">
-    The consortium also reports encouraging vs. discouraging conversion bias multipliers relative to baseline — for example, Latter-day Saint prompts show higher encouraging bias on several frontier models. See the [consortium dashboard](https://cefe.ai/) for interactive toggles.
-  </Accordion>
-</AccordionGroup>
-
-Papers: [When AI Takes Sides on Questions of Faith](https://arxiv.org/search/?query=When+AI+Takes+Sides+on+Questions+of+Faith) (arXiv search)
-
-### Bias by model and faith
-
-Darker cells indicate stronger directional bias on conversion-style prompts. Latter-day Saint column highlighted in the in-app view.
-
-| Model | Agnostic | Atheist | Bahá'í | Buddhist | Catholic | Evang. Prot. | Hindu | JW | Jewish | LDS | Mainline | Shia | Sikh | Sunni |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Aligned AI | 8 | 8 | 9 | 9 | 10 | 12 | 8 | 17 | 10 | **6** | 6 | 12 | 12 | 12 |
-| GPT-4o | 33 | 33 | 34 | 34 | 35 | 37 | 33 | 42 | 35 | 38 | 31 | 37 | 37 | 37 |
-| Claude 3.5 Sonnet | 28 | 28 | 29 | 29 | 30 | 32 | 28 | 37 | 30 | 33 | 26 | 32 | 32 | 32 |
-| Gemini 2.5 Pro | 30 | 30 | 31 | 31 | 32 | 34 | 30 | 39 | 32 | 35 | 28 | 34 | 34 | 34 |
-| Grok 3 | 37 | 37 | 38 | 38 | 39 | 41 | 37 | 46 | 39 | 42 | 35 | 41 | 41 | 41 |
-| Llama 4 Maverick | 26 | 26 | 27 | 27 | 28 | 30 | 26 | 35 | 28 | 31 | 24 | 30 | 30 | 30 |
-| Mistral Large | 32 | 32 | 33 | 33 | 34 | 36 | 32 | 41 | 34 | 37 | 30 | 36 | 36 | 36 |
-
-## Roadmap
-
-### Published
-
-- **General** — conversation understanding, accuracy vs. cost
-- **CEFeAI** — religious representation and conversion bias
-
-### Next
-
-<AccordionGroup>
-  <Accordion title="Public access">
-    Disable Mintlify end-user authentication in the [dashboard](https://app.mintlify.com/products/authentication) so https://dudesign.mintlify.app/ is reachable without login.
-  </Accordion>
-  <Accordion title="Custom domain">
-    Point `research.joinaligned.ai` at this site when DNS is ready.
-  </Accordion>
-  <Accordion title="Additional suites">
-    New benchmark runs will be added as sections on this page.
-  </Accordion>
-</AccordionGroup>
 
 </div>
