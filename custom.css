@@ -328,8 +328,31 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 }
 
 .benchmarks-page-shell span[data-as="p"] + div:has(> [data-name="frame"]),
-.benchmarks-page-shell p + div:has(> [data-name="frame"]) {
+.benchmarks-page-shell p + div:has(> [data-name="frame"]),
+.benchmarks-page-shell span[data-as="p"] + .benchmarks-chart-frame,
+.benchmarks-page-shell p + .benchmarks-chart-frame {
   margin-top: 1.25rem;
+}
+
+.benchmarks-chart-frame {
+  margin: 0;
+  width: 100%;
+}
+
+.benchmarks-chart-frame img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  object-fit: initial;
+  width: 100%;
+}
+
+.benchmarks-chart-caption {
+  color: #71717a;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin: 0.75rem 0 0;
+  text-align: center;
 }
 
 .benchmarks-page-shell [data-name="frame"] {
@@ -345,5 +368,6 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 .benchmarks-page-shell [data-name="frame"] img {
   display: block;
   height: auto;
+  object-fit: initial;
   width: 100%;
 }

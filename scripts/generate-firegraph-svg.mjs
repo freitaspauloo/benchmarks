@@ -360,7 +360,7 @@ function buildChart({ costScale, filename, titleSuffix }) {
   const cardH = 480;
 
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="${canvasW}" height="600" viewBox="0 0 ${canvasW} 600" role="img" aria-label="Accuracy vs cost scatter plot${titleSuffix ? `, ${titleSuffix}` : ""}">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${canvasW} 600" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Accuracy vs cost scatter plot${titleSuffix ? `, ${titleSuffix}` : ""}">
   <defs>
     <linearGradient id="chart-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#fafafa" />
