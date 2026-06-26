@@ -47,11 +47,13 @@ mode: wide
           <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
         </a>
       </div>
-      <div
-        className="benchmarks-feature-preview benchmarks-feature-preview-chart benchmarks-feature-preview-chart--scatter"
-        role="img"
-        aria-label="General benchmark scatter plot — accuracy vs. cost."
-      />
+      <div className="benchmarks-feature-preview">
+        <img
+          src="/images/general-accuracy-vs-cost-log-hero.svg"
+          alt="General benchmark scatter plot — accuracy vs. cost."
+          className="benchmarks-feature-preview-chart benchmarks-feature-preview-chart--scatter"
+        />
+      </div>
     </div>
   </Tab>
 
@@ -83,11 +85,13 @@ mode: wide
           <span className="benchmarks-feature-chevron" aria-hidden="true">›</span>
         </a>
       </div>
-      <div
-        className="benchmarks-feature-preview benchmarks-feature-preview-chart benchmarks-feature-preview-chart--cefeai"
-        role="img"
-        aria-label="CEFeAI religious representation benchmark chart."
-      />
+      <div className="benchmarks-feature-preview">
+        <img
+          src="/images/cefeai-religious-representation-meaningful-hero.svg"
+          alt="CEFeAI religious representation benchmark chart."
+          className="benchmarks-feature-preview-chart benchmarks-feature-preview-chart--cefeai"
+        />
+      </div>
     </div>
   </Tab>
 
@@ -187,11 +191,12 @@ Conversation understanding and hallucination detection — accuracy vs. average 
 
 Aligned AI Fast and Research sit close to top Grok and Opus accuracy while staying far lower on average benchmark cost per chat. See [Model](/#model) for how those modes map to the product.
 
-<div
-  className="benchmarks-chart-frame benchmarks-chart-frame--embed benchmarks-chart-frame--scatter"
-  role="img"
-  aria-label="Scatter plot of model accuracy versus average cost per chat on a log cost scale."
-/>
+<div className="benchmarks-chart-frame">
+  <img
+    src="/images/general-accuracy-vs-cost-log.svg"
+    alt="Scatter plot of model accuracy versus average cost per chat on a log cost scale."
+  />
+</div>
 
 <p className="benchmarks-chart-caption">Accuracy vs. average cost per chat. Aligned AI Fast and Research cluster near frontier accuracy at a fraction of the cost.</p>
 
@@ -309,11 +314,12 @@ The Religious Representation benchmark measures how frequently religious content
 
 **AFB_ReligiousRepresentation_v.1_2Q26** · Data collected May 2026 · 150 questions × 7 models
 
-<div
-  className="benchmarks-chart-frame benchmarks-chart-frame--embed benchmarks-chart-frame--cefeai-religious"
-  role="img"
-  aria-label="Horizontal bar chart of meaningful religious representation by model."
-/>
+<div className="benchmarks-chart-frame">
+  <img
+    src="/images/cefeai-religious-representation-meaningful.svg"
+    alt="Horizontal bar chart of meaningful religious representation by model."
+  />
+</div>
 
 | Model | No rep. | Any rep. | Meaningful | Balanced | Predom. |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -346,11 +352,12 @@ The Conversion Bias benchmark tests to what degree models push users toward or a
 
 **AFB_ConversionBias_v.2_2Q26** · Data collected May 2026 · 14 faiths × 7 models
 
-<div
-  className="benchmarks-chart-frame benchmarks-chart-frame--embed benchmarks-chart-frame--cefeai-bias"
-  role="img"
-  aria-label="Horizontal bar chart of total conversion bias by model."
-/>
+<div className="benchmarks-chart-frame">
+  <img
+    src="/images/cefeai-conversion-bias-total.svg"
+    alt="Horizontal bar chart of total conversion bias by model."
+  />
+</div>
 
 | Model | Total bias |
 | --- | ---: |

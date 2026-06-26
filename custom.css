@@ -265,25 +265,20 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 }
 
 .benchmarks-feature-preview-chart {
-  background-color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   display: block;
+  height: auto;
+  max-width: 100%;
+  object-fit: unset !important;
+  object-position: initial !important;
   width: 100%;
 }
 
 .benchmarks-feature-preview-chart--scatter {
   align-self: center;
-  aspect-ratio: 720 / 420;
-  background-image: url("/images/general-accuracy-vs-cost-log-hero.svg");
-  min-height: 280px;
-  width: 100%;
 }
 
 .benchmarks-feature-preview-chart--cefeai {
-  aspect-ratio: 640 / 329;
-  background-image: url("/images/cefeai-religious-representation-meaningful-hero.svg");
+  align-self: center;
 }
 
 .benchmarks-feature-preview img,
@@ -378,7 +373,10 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 }
 
 .benchmarks-chart-frame {
+  border-radius: 0.75rem;
+  line-height: 0;
   margin: 0;
+  overflow: hidden;
   width: 100%;
 }
 
@@ -387,6 +385,8 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
   display: block !important;
   height: auto !important;
   max-width: 100%;
+  object-fit: unset !important;
+  object-position: initial !important;
   width: 100% !important;
 }
 
@@ -399,31 +399,6 @@ html[data-page-mode="wide"] .benchmarks-page-shell table {
 .benchmarks-chart-frame span.contents {
   display: block !important;
   width: 100% !important;
-}
-
-.benchmarks-chart-frame--scatter {
-  aspect-ratio: 1024 / 623;
-  background: linear-gradient(145deg, #fafafa 0%, #f4f4f5 55%, #ececee 100%) center / cover no-repeat,
-    url("/images/general-accuracy-vs-cost-log.svg") center / 100% 100% no-repeat;
-}
-
-.benchmarks-chart-frame--cefeai-religious {
-  aspect-ratio: 1024 / 615;
-  background: #f4f4f5 url("/images/cefeai-religious-representation-meaningful.svg") center / 100% 100% no-repeat;
-}
-
-.benchmarks-chart-frame--cefeai-bias {
-  aspect-ratio: 1024 / 599;
-  background: #f4f4f5 url("/images/cefeai-conversion-bias-total.svg") center / 100% 100% no-repeat;
-}
-
-.benchmarks-chart-frame--embed {
-  background-color: #f4f4f5;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  line-height: 0;
-  width: 100%;
 }
 
 .benchmarks-chart-caption {
